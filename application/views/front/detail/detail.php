@@ -20,6 +20,6 @@
             <button class="btn btn-sm btn-primary"><i class="fa fa-shopping-cart"></i> Booking Sekarang!</button>
           </a>
     <?php } else { ?>
-        <p>Lapangan tidak ditemukan.</p>
+        <p>Lapangan tidak ditemukan  .</p>
     <?php } ?>
 </div>
