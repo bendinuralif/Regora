@@ -56,6 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['about']       = 'page/about';
 $route['contact']     = 'page/contact';
 $route['send']        = 'page/send';
+$route['detail/(:num)'] = 'Detail/index/$1';
+
 
 $route['event']           = 'event/archive';
 $route['gallery/album']   = 'gallery/album';

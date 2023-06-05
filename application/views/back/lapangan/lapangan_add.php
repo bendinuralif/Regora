@@ -34,6 +34,9 @@
                     <br><p><b>Preview Foto</b><br>
                     <img id="preview" src="" alt="" width="350px"/>
                   </div>
+                  <div class="form-group"><label>Fasilitas</label>
+                    <?php echo form_input($fasilitas);?>
+                  </div>
                 </div>
                 <div class="box-footer">
   								<button type="submit" name="submit" class="btn btn-success"><?php echo $button_submit ?></button>

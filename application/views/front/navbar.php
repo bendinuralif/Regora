@@ -8,9 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo base_url() ?>">
-        <img src="<?php echo base_url('assets/images/company/').$company_data->foto.$company_data->foto_type ?>" alt="<?php echo $company_data->company_name ?>" width="100px">
-      </a>
+      <div class="col-lg-4">
+        <a href="<?php echo base_url() ?>" class="logo">
+          <img src="<?php echo base_url('assets/images/company/logo.png'); ?>" alt="JSOFT" width="150px" style="display: block; margin: 7px auto;">
+        </a>
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

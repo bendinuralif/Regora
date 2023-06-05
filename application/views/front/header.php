@@ -16,4 +16,5 @@
     <link href="<?php echo base_url()?>assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo base_url('assets/images/fav.png') ?>" />
+    
   </head>

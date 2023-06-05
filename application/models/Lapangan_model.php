@@ -6,6 +6,13 @@ class Lapangan_model extends CI_Model
   public $id    = 'id_lapangan';
   public $order = 'DESC';
 
+  public function getLapanganById($id) {
+    // Lakukan pengambilan data lapangan dari database berdasarkan ID yang diberikan
+    // Misalnya, menggunakan query untuk mengambil data dari tabel "lapangan"
+    $query = $this->db->get_where('lapangan', array('id_lapangan' => $id));
+    return $query->row();
+}
+
 	function count_all()
 	{
 		$this->db->from($this->table);
