@@ -30,6 +30,7 @@
 												<th style="text-align: center">No.</th>
 												<th style="text-align: center">Nama Lapangan</th>
                         <th style="text-align: center">Harga per Jam</th>
+                        <th style="text-align: center">Fasilitas</th>
                         <th style="text-align: center">Uploader</th>
                         <th style="text-align: center">Upload</th>
                         <th style="text-align: center">Updater</th>
@@ -43,6 +44,7 @@
                           <td style="text-align: center"><?php echo $no++ ?></td>
                           <td style="text-align: center"><?php echo $data->nama_lapangan ?></td>
                           <td style="text-align: center"><?php echo number_format($data->harga) ?></td>
+                          <td style="text-align: center"><?php echo $data->fasilitas ?></td>
                           <td style="text-align: center"><?php echo $data->created_by ?></td>
                           <td style="text-align: center"><?php echo $data->created_at ?></td>
                           <td style="text-align: center"><?php echo $data->modified_by ?></td>

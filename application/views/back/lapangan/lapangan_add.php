@@ -29,13 +29,13 @@
                   <div class="form-group"><label>Harga Per Jam</label>
                     <?php echo form_input($harga);?>
                   </div>
+                  <div class="form-group"><label>Fasilitas</label>
+                    <?php echo form_input($fasilitas);?>
+                  </div>
                   <div class="form-group"><label>Foto</label>
                     <input type="file" class="form-control" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')"/>
                     <br><p><b>Preview Foto</b><br>
                     <img id="preview" src="" alt="" width="350px"/>
-                  </div>
-                  <div class="form-group"><label>Fasilitas</label>
-                    <?php echo form_input($fasilitas);?>
                   </div>
                 </div>
                 <div class="box-footer">
