@@ -127,9 +127,10 @@
 				<?php echo form_close() ?>
 		</div>
 
-
+		<script src="assets/plugins/datepicker/js/secript.js"></script>
 		<link href="<?php echo base_url('assets/plugins/') ?>datepicker/css/bootstrap-datepicker.css" rel="stylesheet">
-		<script src="<?php echo base_url('assets/plugins/') ?>datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="<?php echo base_url('assets/plugins/') ?>datepicker/js/bootstrap-datepicker.js"></script> 
+		<script src="<?php echo base_url('assets/plugins/') ?>datepicker/js/script.js"></script> 
 		<script type="text/javascript">
 			const numberWithCommas = (x) => {
 				var parts = x.toString().split(".");
@@ -210,6 +211,7 @@
 
 					harga_per_jam_el = durasi_el.parent().parent().find(".harga_per_jam");
 					subtotal_el = durasi_el.parent().parent().find(".subtotal");
+					
 
 					if (jam_mulai_el.val() != "") {
 						jam_selesai = moment("01-01-2018 " + jam_mulai_el.val(), "MM-DD-YYYY HH:mm:ss").add(parseInt(durasi), 'hours').format('HH:mm:ss');
@@ -220,6 +222,30 @@
 
 						subtotal_el.html(numberWithCommas(harga_per_jam_int * parseInt(durasi)));
 
+						var jam_mulai_el = durasi_el.parent().parent().find(".jam_mulai");
+						var jam_selesai_el = durasi_el.parent().parent().find(".jam_selesai");
+						var harga_per_jam_el = durasi_el.parent().parent().find(".harga_per_jam");
+						var subtotal_el = durasi_el.parent().parent().find(".subtotal");
+  
+						if (jam_mulai_el.val() != "") {
+							var jam_mulai = jam_mulai_el.val();
+							var jam_mulai_parts = jam_mulai.split(":");
+							var jam = parseInt(jam_mulai_parts[0]);
+  
+							var harga_per_jam = parseInt(harga_per_jam_el.text().replace(/,/g, ''));
+							var subtotal = durasi * harga_per_jam;
+  
+							if (jam >= 17) {
+								subtotal += 100000;
+							}
+
+							if (jam >= 21) {
+								subtotal += 100000;
+							}
+  
+							subtotal_el.text(numberWithCommas(subtotal));
+						}
+
 						subtotal_bawah = 0;
 						$('.subtotal').each(function(i, obj) {
 							a_subtotal_html = $(this).html().trim().replace(/,/g, '');
@@ -228,7 +254,25 @@
 							}
 
 							a_subtotal_html_int = parseInt(a_subtotal_html);
-							subtotal_bawah += a_subtotal_html_int;
+							subtotal_bawah += a_subtotal_html_int ;
+							if (jam_mulai_el.val() != "") {
+							var jam_mulai = jam_mulai_el.val();
+							var jam_mulai_parts = jam_mulai.split(":");
+							var jam = parseInt(jam_mulai_parts[0]);
+  
+							var harga_per_jam = parseInt(harga_per_jam_el.text().replace(/,/g, ''));
+							var subtotal = durasi * harga_per_jam;
+  
+							if (jam >= 17) {
+								subtotal += 100000;
+							}
+
+							if (jam >= 21) {
+								subtotal += 100000;
+							}
+  
+							subtotal_el.text(numberWithCommas(subtotal));
+						}
 						});
 
 						<?php if ($this->session->userdata('usertype') == '3') {
@@ -244,7 +288,7 @@
 						var gtotal = (subtotal_bawah - disc);
 						$("#grandtotal").html(numberWithCommas(gtotal));
 
-						
+							
 					}
 				});
 			});

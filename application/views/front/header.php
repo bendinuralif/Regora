@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><?php echo $title ?> | <?php echo $this->data['company_data']->company_name ?></title>
+  <title><?php echo $title ?> | <?php echo $this->data['company_data']->company_name ?></title>
     <meta charset="utf-8">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta name="description" content="A Freelance Web Developer from Palembang, Indonesia">
