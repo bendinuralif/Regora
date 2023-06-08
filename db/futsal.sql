@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2021 at 04:33 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.15
+-- Generation Time: Jun 08, 2023 at 09:37 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `album` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(20) DEFAULT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `album`
@@ -63,7 +63,7 @@ CREATE TABLE `bank` (
   `atas_nama` varchar(100) NOT NULL,
   `norek` varchar(100) NOT NULL,
   `logo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `bank`
@@ -97,14 +97,14 @@ CREATE TABLE `company` (
   `modified` datetime DEFAULT NULL,
   `created_by` char(50) NOT NULL,
   `modified_by` char(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`id_company`, `company_name`, `company_desc`, `company_address`, `company_maps`, `company_phone`, `company_phone2`, `company_fax`, `company_email`, `foto`, `foto_type`, `created`, `modified`, `created_by`, `modified_by`) VALUES
-(1, 'FUTSAL MERDEKA JAYA', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel nibh ac nisl porttitor tempus sit amet et diam. Etiam sed leo eu elit varius venenatis sed ac arcu. Praesent malesuada gravida diam et tincidunt. Mauris quis metus eget magna efficitur scelerisque. Sed mollis porttitor erat ullamcorper sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse congue, dolor ultricies mollis molestie, libero diam auctor mauris, ultrices euismod leo justo vel enim. Etiam non rutrum arcu. Maecenas at dictum dui, sit amet gravida mauris. Vivamus sagittis neque in purus dapibus, ut pellentesque purus pulvinar. Nunc pretium porta ipsum, at iaculis felis elementum in. Duis cursus ex vitae nunc hendrerit blandit.\r\n\r\nMorbi vel est sed dui tristique elementum sed sed purus. Ut interdum nisi et felis vulputate, quis tempus diam blandit. Mauris tincidunt tellus faucibus, posuere turpis a, consectetur lacus. Nullam quis ipsum neque. Praesent sapien tellus, molestie et diam vel, cursus tristique neque. Nullam sit amet ornare odio. Ut vehicula risus id lacus blandit rutrum. Duis non molestie purus. Etiam turpis ligula, tincidunt sit amet dolor at, rutrum viverra orci. Etiam egestas urna id velit bibendum mollis.\r\n\r\nSed eu sem cursus, congue massa at, bibendum leo. Praesent cursus in nulla a egestas. Fusce aliquam leo eu enim feugiat ullamcorper. Nullam pulvinar dolor eu lacinia bibendum. Integer id ipsum cursus, luctus enim nec, fringilla dolor. Sed sit amet ipsum sit amet quam suscipit gravida vitae ut elit. Donec pellentesque non tortor vitae euismod. Praesent suscipit tempor ex ac viverra. Nunc ut sapien eu velit tempor hendrerit. Vestibulum posuere nisl massa, ornare commodo lorem sagittis ultrices. Sed eget rutrum neque, sed ullamcorper dui. Sed ultricies purus vitae lectus cursus, vestibulum faucibus quam posuere. Donec cursus vitae ipsum nec ullamcorper. Donec maximus orci finibus ante hendrerit, vitae maximus quam facilisis. Cras commodo fringilla porttitor.\r\n\r\nNam pharetra a tortor quis venenatis. Nunc lectus nibh, auctor id ante vel, interdum maximus felis. Cras libero est, mattis a sollicitudin sit amet, ultricies sed tellus. Ut augue lacus, luctus convallis enim quis, ultricies aliquet sem. Sed venenatis eros sit amet velit varius, ac rhoncus nibh sodales. Etiam sit amet efficitur est, vel pretium arcu. Morbi diam nulla, dictum quis ornare ultrices, pharetra quis mi. Nam sollicitudin pharetra congue. Praesent sed mauris at ante tincidunt blandit. Aliquam cursus ante efficitur, iaculis turpis eget, ornare quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla quis lobortis leo. Cras ut risus orci. Sed mattis purus ac libero suscipit, nec venenatis tortor semper. Aliquam sodales massa eget dignissim pharetra.\r\n\r\nNam sed enim vitae erat vulputate feugiat in tempus metus. In maximus erat risus. Donec et viverra nibh. Maecenas hendrerit, sapien id suscipit fermentum, tellus nisl sollicitudin erat, non laoreet dui ex sit amet odio. Nullam sit amet arcu sed felis tempor dapibus. Aliquam erat volutpat. Aenean malesuada a eros sed aliquet. Phasellus condimentum lobortis sapien, sit amet viverra sem iaculis venenatis. Morbi interdum nulla ut nulla fringilla commodo. In eu magna ornare libero pellentesque congue. Vestibulum ultrices congue feugiat.', 'Jl. Maju Mundur Kec. Camat Kel. Lurahan, Kab. Bupaten, Dunia Lain', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16327777.649419477!2d108.84621849858628!3d-2.415291213289622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1506312173230\" width=\"100%\" height=\"200\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '081241412', '0711412402', '12414', 'toko@gmail.com', 'company-profile20180414070824', '.PNG', '2017-11-09 06:45:34', NULL, 'amperakoding', 'amperakoding');
+(1, 'REGORA', 'REGORA didirikan pada tahun 2010 oleh sekelompok individu dengan minat dalam olahraga dan teknologi informasi. Perusahaan ini fokus pada pengembangan sistem aplikasi penyewaan tempat olahraga secara online. Setelah melakukan riset dan pengujian, REGORA meluncurkan platform aplikasi yang mudah digunakan.\nPerkembangan REGORA menarik minat banyak tempat olahraga terkemuka, membentuk kemitraan untuk meningkatkan pelayanan dan efisiensi operasional. Seiring waktu, REGORA terus berinovasi dalam industri aplikasi penyewaan tempat olahraga, memperluas jaringan mitra, dan meningkatkan fitur aplikasi.\nDengan dedikasi terhadap inovasi, REGORA telah menjadi pemain utama dalam industri ini, memberikan kemudahan akses dan efisiensi dalam menyewa tempat olahraga. Mereka terus berupaya memberikan pengalaman terbaik bagi pengguna dan mendorong pertumbuhan industri olahraga secara keseluruhan.', 'Jl. Maju Mundur Kec. Camat Kel. Lurahan, Kab. Bupaten, Dunia Lain', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16327777.649419477!2d108.84621849858628!3d-2.415291213289622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1506312173230\" width=\"100%\" height=\"200\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '081241412', '0711412402', '12414', 'toko@gmail.com', 'company-profile20180414070824', '.PNG', '2017-11-09 06:45:34', NULL, 'amperakoding', 'amperakoding');
 
 -- --------------------------------------------------------
 
@@ -115,14 +115,14 @@ INSERT INTO `company` (`id_company`, `company_name`, `company_desc`, `company_ad
 CREATE TABLE `diskon` (
   `id` int(11) NOT NULL,
   `harga` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `diskon`
 --
 
 INSERT INTO `diskon` (`id`, `harga`) VALUES
-(1, 50000);
+(1, 30000);
 
 -- --------------------------------------------------------
 
@@ -142,7 +142,7 @@ CREATE TABLE `event` (
   `created_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `modified_by` char(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `event`
@@ -154,7 +154,8 @@ INSERT INTO `event` (`id_event`, `nama_event`, `slug_event`, `deskripsi`, `kateg
 (4, 'Where does it come from?', 'where-does-it-come-from', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>', 1, 'where-does-it-come-from20180723083441', '.jpg', '2018-04-02 21:14:39', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
 (5, 'Where does it come froms?', 'where-does-it-come-froms', '<p>What is Lorem Ipsum?<br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n<p>Where does it come from?<br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>', 1, 'where-does-it-come-froms20180723083339', '.jpg', '2018-04-03 10:03:54', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
 (6, 'Aliquam ullamcorper', 'aliquam-ullamcorper', '<p>Aliquam ullamcorper magna consectetur augue laoreet luctus. Duis id nisi eleifend, vestibulum justo eget, scelerisque purus. Pellentesque non risus nec eros ultricies euismod. Donec ullamcorper auctor diam ut fermentum. Maecenas mollis neque magna. Pellentesque blandit arcu mi, vel consequat orci dapibus vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus rutrum, risus vitae venenatis efficitur, arcu metus blandit erat, quis pharetra neque leo non quam. Vestibulum imperdiet eleifend rhoncus. Nunc condimentum tellus vel ullamcorper iaculis. Vivamus vitae lorem sem.</p>\r\n<p>Donec lorem diam, rhoncus at tempus eget, dignissim quis nulla. Donec consequat malesuada lacinia. Mauris eget ipsum eget mauris tristique lobortis vel vel turpis. Pellentesque accumsan metus nisi, non molestie diam hendrerit eu. Sed eget lacinia elit. Nulla lobortis diam sed nunc malesuada cursus. Mauris ac maximus tellus.</p>', 2, 'aliquam-ullamcorper20180723083358', '.png', '2018-04-03 11:08:48', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(7, 'In fermentum scelerisqu', 'in-fermentum-scelerisqu', '<p>In fermentum scelerisque neque. Integer fermentum semper lacinia. Donec porttitor accumsan sem, eget fringilla nisl blandit a. Nam pulvinar faucibus velit, eget vestibulum erat aliquet ac. Maecenas imperdiet felis vitae orci laoreet fermentum. Fusce dui neque, volutpat ac fermentum quis, maximus id diam. Nullam eros urna, tempus tempor vehicula sit amet, sollicitudin quis massa. Mauris metus ex, eleifend nec aliquam a, ullamcorper et leo. Sed convallis, est vitae tincidunt ultrices, orci diam hendrerit magna, ut molestie dui nisl non quam.</p>\r\n<p>Pellentesque in egestas tellus, eget cursus odio. Morbi mollis diam turpis, id luctus leo consequat eu. Integer felis neque, iaculis eget vulputate et, congue pharetra elit. Morbi lacinia lacus vel elit suscipit euismod. Ut tellus leo, sodales ac suscipit in, semper eget sem. Curabitur ultrices, sem id dapibus semper, lectus erat vehicula magna, eu accumsan tellus leo at orci. Fusce rutrum tincidunt tristique. Suspendisse ac cursus libero. Donec aliquet accumsan ex in dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vel dignissim velit. Vestibulum mattis malesuada euismod. Praesent in vehicula dui, sit amet fringilla leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec imperdiet hendrerit neque, at ultricies neque eleifend in.</p>\r\n<p>Sed rutrum egestas diam, vitae sodales odio vulputate id. Phasellus felis risus, varius eget dolor ac, fringilla dapibus risus. Pellentesque ante nulla, egestas ac fermentum suscipit, aliquam ac eros. Mauris elementum justo nec leo imperdiet hendrerit. Praesent ut augue sit amet massa sollicitudin maximus quis eget augue. Etiam malesuada dictum sem, ut ullamcorper diam mattis ut. Morbi non imperdiet ante, ac fermentum justo. Nulla congue magna vel lectus elementum laoreet. Suspendisse ante ipsum, eleifend vel condimentum eu, varius non dolor.</p>', 1, 'in-fermentum-scelerisqu20180413030957', '.jpeg', '2018-04-03 11:11:51', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding');
+(7, 'In fermentum scelerisqu', 'in-fermentum-scelerisqu', '<p>In fermentum scelerisque neque. Integer fermentum semper lacinia. Donec porttitor accumsan sem, eget fringilla nisl blandit a. Nam pulvinar faucibus velit, eget vestibulum erat aliquet ac. Maecenas imperdiet felis vitae orci laoreet fermentum. Fusce dui neque, volutpat ac fermentum quis, maximus id diam. Nullam eros urna, tempus tempor vehicula sit amet, sollicitudin quis massa. Mauris metus ex, eleifend nec aliquam a, ullamcorper et leo. Sed convallis, est vitae tincidunt ultrices, orci diam hendrerit magna, ut molestie dui nisl non quam.</p>\r\n<p>Pellentesque in egestas tellus, eget cursus odio. Morbi mollis diam turpis, id luctus leo consequat eu. Integer felis neque, iaculis eget vulputate et, congue pharetra elit. Morbi lacinia lacus vel elit suscipit euismod. Ut tellus leo, sodales ac suscipit in, semper eget sem. Curabitur ultrices, sem id dapibus semper, lectus erat vehicula magna, eu accumsan tellus leo at orci. Fusce rutrum tincidunt tristique. Suspendisse ac cursus libero. Donec aliquet accumsan ex in dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vel dignissim velit. Vestibulum mattis malesuada euismod. Praesent in vehicula dui, sit amet fringilla leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec imperdiet hendrerit neque, at ultricies neque eleifend in.</p>\r\n<p>Sed rutrum egestas diam, vitae sodales odio vulputate id. Phasellus felis risus, varius eget dolor ac, fringilla dapibus risus. Pellentesque ante nulla, egestas ac fermentum suscipit, aliquam ac eros. Mauris elementum justo nec leo imperdiet hendrerit. Praesent ut augue sit amet massa sollicitudin maximus quis eget augue. Etiam malesuada dictum sem, ut ullamcorper diam mattis ut. Morbi non imperdiet ante, ac fermentum justo. Nulla congue magna vel lectus elementum laoreet. Suspendisse ante ipsum, eleifend vel condimentum eu, varius non dolor.</p>', 1, 'in-fermentum-scelerisqu20180413030957', '.jpeg', '2018-04-03 11:11:51', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
+(8, 'karnaval', 'karnaval', '<p>vvvjhhjbjjknkn</p>', 2, NULL, NULL, '2023-05-30 11:59:36', 'superadmin', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -172,7 +173,7 @@ CREATE TABLE `foto` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(20) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `foto`
@@ -199,14 +200,13 @@ CREATE TABLE `jam` (
   `id` int(11) NOT NULL,
   `jam` varchar(50) NOT NULL,
   `is_available` tinyint(4) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `jam`
 --
 
 INSERT INTO `jam` (`id`, `jam`, `is_available`) VALUES
-(1, '06:00:00', 1),
 (2, '07:00:00', 1),
 (3, '08:00:00', 1),
 (4, '09:00:00', 1),
@@ -240,7 +240,7 @@ CREATE TABLE `kategori` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `kategori`
@@ -264,7 +264,7 @@ CREATE TABLE `kontak` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `kontak`
@@ -285,7 +285,7 @@ CREATE TABLE `kota` (
   `id_kota` int(11) NOT NULL,
   `provinsi_id` int(11) NOT NULL,
   `nama_kota` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `kota`
@@ -805,23 +805,27 @@ CREATE TABLE `lapangan` (
   `nama_lapangan` varchar(100) NOT NULL,
   `harga` int(11) NOT NULL,
   `foto` text NOT NULL,
-  `created_by` varchar(50) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `modified_by` varchar(50) NOT NULL,
-  `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `deskripsi` text NOT NULL,
+  `fasilitas` varchar(100) NOT NULL,
+  `created_by` varchar(255) DEFAULT NULL,
+  `created_at` varchar(255) DEFAULT NULL,
+  `modified_by` varchar(255) DEFAULT NULL,
+  `modified_at` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `lapangan`
 --
 
-INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Lapangan A', 100000, 'lapangan-a20180610164236.jpg', 'amperakoding', '2018-06-10 15:37:43', 'amperakoding', '2021-05-17 19:59:32'),
-(2, 'Lapangan B', 150000, 'lapangan-b20180610164255.jpg', 'amperakoding', '2018-06-10 16:02:44', 'amperakoding', '2021-05-17 19:59:32'),
-(3, 'Lapangan C', 80000, 'lapangan-a20180610164250.jpg', 'amperakoding', '2018-06-10 16:16:17', 'amperakoding', '2021-05-17 19:59:32'),
-(4, 'Lapangan D', 100000, 'lapangan-b20180610164305.jpg', 'amperakoding', '2018-06-10 16:25:05', 'amperakoding', '2021-05-17 19:59:32'),
-(5, 'Lapangan E', 200000, 'lapangan-c20180610164320.jpg', 'amperakoding', '2018-06-10 16:38:10', 'amperakoding', '2021-05-17 19:59:32'),
-(6, 'Lapangan F', 150000, 'lapangan-c20180610164329.jpg', 'amperakoding', '2018-06-10 16:54:28', 'amperakoding', '2021-05-17 19:59:32');
+INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `deskripsi`, `fasilitas`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
+(1, 'Lapangan Futsal', 100000, 'lapangan-futsal20230526092511.jpg', '', '', NULL, NULL, NULL, NULL),
+(3, 'Tempat Fitness', 80000, 'tempat-fitness20230526093238.jpg', '', 'bxhjujsjsbnhysbh', NULL, NULL, NULL, NULL),
+(4, 'Lapangan Bulu Tangkis', 100000, 'lapangan-bulu-tangkis20230526093155.jpg', '', '', NULL, NULL, NULL, NULL),
+(5, 'Area Bowling', 200000, 'lapangan-e20230526093101.jpg', '', '', NULL, NULL, NULL, NULL),
+(6, 'Kolam Renang', 150000, 'kolam-renang20230526093002.jpg', '', '', NULL, NULL, NULL, NULL),
+(8, 'kokook', 2599000, '', '', '', NULL, NULL, NULL, NULL),
+(9, 'Lapangan Futsal', 123, '', '', 'sdfghjklkjhgfds', 'superadmin', NULL, NULL, NULL),
+(10, 'Kolam', 123, '', '', 'qwerds', 'superadmin', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -831,10 +835,10 @@ INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `create
 
 CREATE TABLE `login_attempts` (
   `id` int(10) UNSIGNED NOT NULL,
-  `ip_address` varchar(15) CHARACTER SET utf8 NOT NULL,
-  `login` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `ip_address` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `time` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -848,7 +852,7 @@ CREATE TABLE `page` (
   `judul_seo` varchar(50) NOT NULL,
   `isi_page` text NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `page`
@@ -870,7 +874,7 @@ INSERT INTO `page` (`id_page`, `judul_page`, `judul_seo`, `isi_page`, `gambar`) 
 CREATE TABLE `provinsi` (
   `id_provinsi` int(11) NOT NULL,
   `nama_provinsi` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `provinsi`
@@ -929,17 +933,19 @@ CREATE TABLE `slider` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `created_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
-  `modified_by` char(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `modified_by` char(50) NOT NULL,
+  `uploader` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `slider`
 --
 
-INSERT INTO `slider` (`id_slider`, `no_urut`, `nama_slider`, `link`, `foto`, `foto_type`, `foto_size`, `created_at`, `created_by`, `modified_at`, `modified_by`) VALUES
-(1, 1, 'Slider 1', 'http://www.yahoo.com ', '120180610164516', '.jpg', 203, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding'),
-(2, 2, 'Slider 2', 'http://www.google.com ', '220180610164521', '.jpg', 833, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding'),
-(3, 3, 'XXZ', 'http://www.facebook.com', '320180610164527', '.jpg', 167, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding');
+INSERT INTO `slider` (`id_slider`, `no_urut`, `nama_slider`, `link`, `foto`, `foto_type`, `foto_size`, `created_at`, `created_by`, `modified_at`, `modified_by`, `uploader`) VALUES
+(1, 1, 'Slider 1', 'http://www.yahoo.com ', '120180610164516', '.jpg', 203, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding', NULL),
+(2, 2, 'Slider 2', 'http://www.google.com ', '220180610164521', '.jpg', 833, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding', NULL),
+(3, 3, 'XXZ', 'http://www.facebook.com', '320230606122000', '.jpg', 167, '2017-11-25 08:05:03', 'amperakoding', '2023-06-06 12:20:00', 'superadmin', NULL),
+(4, 4, 'sdfghj', 'www.google.com', '420230606122238', '.jpg', 0, '2023-06-06 12:22:38', '', NULL, '', 'superadmin');
 
 -- --------------------------------------------------------
 
@@ -952,7 +958,7 @@ CREATE TABLE `subscriber` (
   `email` char(20) NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -972,21 +978,64 @@ CREATE TABLE `transaksi` (
   `status` int(11) NOT NULL,
   `created_date` date NOT NULL,
   `created_time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `diskon`, `grand_total`, `deadline`, `catatan`, `status`, `created_date`, `created_time`) VALUES
-(1, 'J-210517-0001', 3, 100000, 0, 100000, '2021-05-17 21:03:57', '', 2, '2021-05-17', '08:03:19'),
-(2, 'J-210517-0002', 4, 260000, 50000, 210000, '2021-05-17 21:10:50', 'takada', 2, '2021-05-17', '08:09:54'),
 (3, 'J-210516-0003', 3, 300000, 0, 300000, '2021-05-16 21:20:17', '', 2, '2021-05-16', '08:20:09'),
 (4, 'J-210408-0001', 3, 330000, 0, 330000, '2021-04-08 21:21:53', '', 2, '2021-04-08', '08:21:35'),
 (5, 'J-210408-0002', 3, 150000, 0, 150000, '2021-04-08 21:22:35', '', 2, '2021-04-08', '08:22:29'),
 (6, 'J-210408-0003', 3, 300000, 0, 300000, '2021-04-08 21:23:15', '', 2, '2021-04-08', '08:23:09'),
 (7, 'J-210410-0004', 3, 300000, 0, 300000, '2021-04-10 21:24:07', '', 2, '2021-04-10', '08:23:52'),
-(8, 'J-210517-0003', 3, 150000, 0, 150000, '2021-05-17 21:23:05', '', 1, '2021-05-17', '08:23:01');
+(8, 'J-210517-0003', 3, 150000, 0, 150000, '2021-05-17 21:23:05', '', 2, '2021-05-17', '08:23:01'),
+(9, 'J-230523-0001', 1, 600000, 0, 600000, '2023-05-23 01:19:47', '', 2, '2023-05-23', '12:19:28'),
+(10, 'J-230523-0002', 5, 3400000, 0, 3400000, '2023-05-23 10:04:12', '', 2, '2023-05-23', '09:01:03'),
+(11, 'J-230523-0003', 5, 300000, 0, 300000, '2023-05-23 12:24:53', '', 2, '2023-05-23', '11:24:34'),
+(12, 'J-230523-0004', 5, 700000, 0, 700000, '2023-05-23 12:33:02', '', 2, '2023-05-23', '11:32:48'),
+(13, 'J-230523-0005', 5, 100000, 0, 100000, '2023-05-23 12:34:28', '', 2, '2023-05-23', '11:34:05'),
+(14, 'J-230523-0006', 5, 100000, 0, 100000, '2023-05-23 13:14:12', '', 1, '2023-05-23', '11:36:00'),
+(15, 'J-230523-0007', 7, 0, 0, 0, '0000-00-00 00:00:00', '', 2, '2023-05-23', '12:10:18'),
+(16, 'J-230523-0008', 5, 200000, 0, 200000, '2023-05-25 15:11:12', '', 1, '2023-05-23', '12:30:07'),
+(17, 'J-230525-0009', 2, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-05-25', '07:31:47'),
+(18, 'J-230525-0010', 5, 200000, 0, 200000, '2023-05-26 10:53:11', '', 1, '2023-05-25', '02:11:53'),
+(19, 'J-230525-0011', 1, 100000, 0, 100000, '2023-05-30 12:51:32', '', 1, '2023-05-25', '02:29:17'),
+(20, 'J-230526-0012', 5, 200000, 0, 200000, '2023-06-06 09:44:43', '', 2, '2023-05-26', '09:56:39'),
+(21, 'J-230530-0013', 1, 2599000, 0, 2599000, '2023-06-06 13:28:29', '', 1, '2023-05-30', '11:55:32'),
+(22, 'J-230606-0001', 5, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-06', '08:44:50'),
+(23, 'J-230606-0002', 1, 200000, 0, 200000, '2023-06-06 14:37:52', '', 1, '2023-06-06', '12:30:07'),
+(24, 'J-230606-0003', 1, 300000, 0, 300000, '2023-06-06 15:37:18', '', 1, '2023-06-06', '01:38:18'),
+(25, 'J-230606-0004', 1, 200000, 0, 200000, '2023-06-06 15:37:36', '', 1, '2023-06-06', '02:37:25'),
+(26, 'J-230606-0005', 1, 200000, 0, 200000, '2023-06-06 15:38:50', '', 1, '2023-06-06', '02:38:43'),
+(27, 'J-230606-0006', 1, 200000, 0, 200000, '2023-06-06 15:39:51', '', 1, '2023-06-06', '02:39:44'),
+(28, 'J-230606-0007', 1, 123, 0, 123, '2023-06-06 15:43:54', '', 1, '2023-06-06', '02:43:43'),
+(29, 'J-230606-0008', 1, 200000, 0, 200000, '2023-06-06 16:17:24', '', 1, '2023-06-06', '03:17:12'),
+(30, 'J-230606-0009', 1, 200000, 0, 200000, '2023-06-06 16:22:00', '', 1, '2023-06-06', '03:21:54'),
+(31, 'J-230606-0010', 1, 200000, 0, 200000, '2023-06-06 16:24:43', '', 1, '2023-06-06', '03:24:34'),
+(32, 'J-230606-0011', 1, 200000, 0, 200000, '2023-06-06 16:26:27', '', 1, '2023-06-06', '03:26:22'),
+(33, 'J-230606-0012', 1, 1000000, 0, 1000000, '2023-06-06 16:30:23', '', 1, '2023-06-06', '03:30:12'),
+(34, 'J-230606-0013', 1, 200000, 0, 200000, '2023-06-06 16:34:50', '', 1, '2023-06-06', '03:31:22'),
+(35, 'J-230606-0014', 1, 200000, 0, 200000, '2023-06-06 21:26:11', '', 1, '2023-06-06', '08:24:07'),
+(36, 'J-230606-0015', 1, 400000, 0, 400000, '2023-06-06 21:33:05', '', 1, '2023-06-06', '08:32:52'),
+(37, 'J-230606-0016', 1, 200000, 0, 200000, '2023-06-06 21:37:27', '', 1, '2023-06-06', '08:36:29'),
+(38, 'J-230606-0017', 1, 200000, 0, 200000, '2023-06-06 21:40:21', '', 2, '2023-06-06', '08:38:10'),
+(39, 'J-230606-0018', 1, 200000, 0, 200000, '2023-06-06 21:50:40', '', 2, '2023-06-06', '08:45:42'),
+(40, 'J-230608-0019', 1, 800000, 0, 800000, '2023-06-08 12:20:44', '', 1, '2023-06-08', '11:18:14'),
+(41, 'J-230608-0020', 1, 200000, 0, 200000, '2023-06-08 14:04:07', '', 1, '2023-06-08', '11:56:22'),
+(42, 'J-230608-0021', 1, 200000, 0, 200000, '2023-06-08 14:05:04', '', 1, '2023-06-08', '01:04:10'),
+(43, 'J-230608-0022', 1, 400000, 0, 400000, '2023-06-08 14:06:46', '', 1, '2023-06-08', '01:06:05'),
+(44, 'J-230608-0023', 1, 2000000, 0, 2000000, '2023-06-08 14:57:08', '', 1, '2023-06-08', '01:41:58'),
+(45, 'J-230608-0024', 1, 200000, 0, 200000, '2023-06-08 15:05:50', '', 1, '2023-06-08', '02:05:20'),
+(46, 'J-230608-0025', 1, 200000, 0, 200000, '2023-06-08 15:21:40', '', 1, '2023-06-08', '02:08:30'),
+(47, 'J-230608-0026', 1, 200000, 0, 200000, '2023-06-08 15:26:11', '', 1, '2023-06-08', '02:26:05'),
+(48, 'J-230608-0027', 1, 200000, 0, 200000, '2023-06-08 15:27:25', '', 1, '2023-06-08', '02:26:29'),
+(49, 'J-230608-0028', 1, 200000, 0, 200000, '2023-06-08 15:29:04', '', 1, '2023-06-08', '02:28:56'),
+(50, 'J-230608-0029', 1, 200000, 0, 200000, '2023-06-08 15:29:54', '', 1, '2023-06-08', '02:29:48'),
+(51, 'J-230608-0030', 1, 2599000, 0, 2599000, '2023-06-08 15:33:45', '', 1, '2023-06-08', '02:33:37'),
+(52, 'J-230608-0031', 1, 150000, 0, 150000, '2023-06-08 15:34:15', '', 1, '2023-06-08', '02:33:53'),
+(53, 'J-230608-0032', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-08', '02:35:24');
 
 -- --------------------------------------------------------
 
@@ -1005,24 +1054,60 @@ CREATE TABLE `transaksi_detail` (
   `harga_jual` int(11) NOT NULL,
   `total` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `transaksi_detail`
 --
 
 INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tanggal`, `jam_mulai`, `durasi`, `jam_selesai`, `harga_jual`, `total`, `created_at`) VALUES
-(1, 1, 1, '2021-05-18', '07:00:00', 1, '08:00:00', 100000, 100000, '2021-05-17 20:03:19'),
-(2, 2, 1, '2021-05-18', '08:00:00', 1, '09:00:00', 100000, 100000, '2021-05-17 20:09:54'),
-(3, 2, 3, '2021-05-17', '10:00:00', 2, '12:00:00', 80000, 160000, '2021-05-17 20:09:55'),
 (4, 3, 4, '2021-05-16', '13:00:00', 3, '16:00:00', 100000, 300000, '2021-05-16 20:20:09'),
 (5, 4, 1, '2021-04-09', '22:00:00', 1, '23:00:00', 100000, 100000, '2021-04-08 20:21:35'),
-(6, 4, 2, '2021-04-11', '21:00:00', 1, '22:00:00', 150000, 150000, '2021-04-08 20:21:36'),
 (7, 4, 3, '2021-04-13', '21:00:00', 1, '22:00:00', 80000, 80000, '2021-04-08 20:21:36'),
 (8, 5, 6, '2021-04-08', '10:00:00', 1, '11:00:00', 150000, 150000, '2021-04-08 20:22:29'),
-(9, 6, 2, '2021-04-10', '10:00:00', 2, '12:00:00', 150000, 300000, '2021-04-08 20:23:09'),
-(10, 7, 2, '2021-04-10', '08:00:00', 2, '10:00:00', 150000, 300000, '2021-04-10 20:23:52'),
-(11, 8, 2, '2021-05-18', '10:00:00', 1, '11:00:00', 150000, 150000, '2021-05-17 20:23:01');
+(14, 10, 5, '2023-05-31', '24:00:00', 17, '41:00:00', 200000, 3400000, '2023-05-23 09:01:41'),
+(16, 12, 1, '2023-05-23', '06:00:00', 7, '13:00:00', 100000, 700000, '2023-05-23 11:32:48'),
+(17, 13, 1, '2023-05-23', '17:00:00', 1, '18:00:00', 100000, 100000, '2023-05-23 11:34:05'),
+(18, 14, 1, '2023-05-23', '16:00:00', 1, '17:00:00', 100000, 100000, '2023-05-23 11:36:00'),
+(19, 15, 1, '0000-00-00', NULL, 0, NULL, 100000, 100000, '2023-05-23 12:10:18'),
+(24, 16, 1, '2023-05-25', '06:00:00', 2, '08:00:00', 100000, 200000, '2023-05-23 13:38:32'),
+(26, 17, 1, '0000-00-00', NULL, 0, NULL, 100000, 100000, '2023-05-25 14:07:36'),
+(27, 18, 1, '2023-05-26', '06:00:00', 2, '08:00:00', 100000, 200000, '2023-05-25 14:11:53'),
+(31, 20, 5, '2023-06-06', '18:00:00', 1, '19:00:00', 200000, 200000, '2023-05-26 09:56:39'),
+(33, 19, 4, '2023-05-30', '07:00:00', 1, '08:00:00', 100000, 100000, '2023-05-30 11:49:01'),
+(36, 22, 8, '0000-00-00', NULL, 0, NULL, 2599000, 2599000, '2023-06-06 08:51:17'),
+(37, 21, 8, '2023-06-06', '22:00:00', 1, '23:00:00', 2599000, 2599000, '2023-06-06 12:23:27'),
+(38, 23, 5, '2023-06-13', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-06 12:30:07'),
+(41, 24, 5, '2023-06-20', '23:00:00', 1, '24:00:00', 200000, 200000, '2023-06-06 14:35:48'),
+(42, 24, 1, '2023-06-06', '18:00:00', 1, '19:00:00', 100000, 100000, '2023-06-06 14:36:57'),
+(43, 25, 5, '2023-06-06', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-06 14:37:25'),
+(44, 26, 5, '2023-06-20', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-06 14:38:43'),
+(45, 27, 5, '2023-06-28', '21:00:00', 1, '22:00:00', 200000, 200000, '2023-06-06 14:39:44'),
+(46, 28, 9, '2023-06-27', '20:00:00', 1, '21:00:00', 123, 123, '2023-06-06 14:43:43'),
+(47, 29, 5, '2023-06-26', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-06 15:17:12'),
+(48, 30, 5, '2023-06-27', '23:00:00', 1, '24:00:00', 200000, 200000, '2023-06-06 15:21:54'),
+(49, 31, 5, '2023-06-27', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-06 15:24:34'),
+(50, 32, 5, '2023-06-28', '23:00:00', 1, '24:00:00', 200000, 200000, '2023-06-06 15:26:23'),
+(51, 33, 5, '2023-06-27', '17:00:00', 5, '22:00:00', 200000, 1000000, '2023-06-06 15:30:12'),
+(52, 34, 5, '2023-06-27', '24:00:00', 1, '25:00:00', 200000, 200000, '2023-06-06 15:31:22'),
+(53, 35, 5, '2023-06-06', '19:00:00', 1, '20:00:00', 200000, 200000, '2023-06-06 20:24:07'),
+(54, 36, 1, '2023-06-06', '17:00:00', 4, '21:00:00', 100000, 400000, '2023-06-06 20:32:52'),
+(55, 37, 5, '2023-06-25', '17:00:00', 1, '18:00:00', 200000, 200000, '2023-06-06 20:36:29'),
+(56, 38, 5, '2023-06-06', '17:00:00', 1, '18:00:00', 200000, 200000, '2023-06-06 20:38:10'),
+(57, 39, 5, '2023-06-20', '19:00:00', 1, '20:00:00', 200000, 200000, '2023-06-06 20:45:42'),
+(58, 40, 5, '2023-06-08', '17:00:00', 4, '21:00:00', 200000, 800000, '2023-06-08 11:18:14'),
+(59, 41, 5, '2023-06-17', '17:00:00', 1, '18:00:00', 200000, 200000, '2023-06-08 11:56:22'),
+(60, 42, 5, '2023-06-08', '21:00:00', 1, '22:00:00', 200000, 200000, '2023-06-08 13:04:10'),
+(61, 43, 5, '2023-06-20', '17:00:00', 2, '19:00:00', 200000, 400000, '2023-06-08 13:06:05'),
+(62, 44, 5, '2023-06-28', '19:00:00', 10, '29:00:00', 200000, 2000000, '2023-06-08 13:41:58'),
+(63, 45, 5, '2023-06-21', '18:00:00', 1, '19:00:00', 200000, 200000, '2023-06-08 14:05:20'),
+(66, 46, 5, '2023-06-15', '18:00:00', 1, '19:00:00', 200000, 200000, '2023-06-08 14:20:21'),
+(67, 47, 5, '2023-06-13', '20:00:00', 1, '21:00:00', 200000, 200000, '2023-06-08 14:26:05'),
+(68, 48, 5, '2023-06-28', '18:00:00', 1, '19:00:00', 200000, 200000, '2023-06-08 14:26:29'),
+(69, 49, 5, '2023-06-28', '17:00:00', 1, '18:00:00', 200000, 200000, '2023-06-08 14:28:56'),
+(70, 50, 5, '2023-06-29', '24:00:00', 1, '25:00:00', 200000, 200000, '2023-06-08 14:29:48'),
+(71, 51, 8, '2023-06-28', '24:00:00', 1, '25:00:00', 2599000, 2599000, '2023-06-08 14:33:37'),
+(73, 52, 6, '2023-06-28', '23:00:00', 1, '24:00:00', 150000, 150000, '2023-06-08 14:34:02');
 
 -- --------------------------------------------------------
 
@@ -1032,38 +1117,41 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `username` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `email` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `phone` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `username` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `provinsi` int(11) DEFAULT NULL,
   `kota` int(11) DEFAULT NULL,
-  `address` text CHARACTER SET utf8 NOT NULL,
+  `address` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `usertype` int(11) NOT NULL,
   `active` tinyint(3) UNSIGNED DEFAULT NULL,
-  `photo` text CHARACTER SET utf8 DEFAULT NULL,
-  `photo_type` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
-  `ip_address` varchar(45) CHARACTER SET utf8 NOT NULL,
-  `salt` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `activation_code` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
-  `forgotten_password_code` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `photo` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `photo_type` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `activation_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `forgotten_password_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `forgotten_password_time` int(10) UNSIGNED DEFAULT NULL,
-  `remember_code` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `remember_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `last_login` int(11) DEFAULT NULL,
   `created_on` int(11) NOT NULL,
   `modified` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `phone`, `provinsi`, `kota`, `address`, `usertype`, `active`, `photo`, `photo_type`, `ip_address`, `salt`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `last_login`, `created_on`, `modified`) VALUES
-(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1621257748, 2147483647, '2021-05-17 20:22:28'),
-(2, 'Admin', 'administrator', '$2y$08$rnCngWyQhFLdVJijctNDKuwJZ8o9VfcSsZ9IM9XN71ugxIpQFeCWe', 'administrator@gmail.com', '08124124', NULL, NULL, 'kaldjlas', 2, 1, 'admin20180424102408', '.jpeg', '::1', NULL, NULL, NULL, NULL, NULL, 1621252084, 1524551716, '2021-05-17 18:48:04'),
+(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1686197512, 2147483647, '2023-06-08 11:11:52'),
+(2, 'Admin', 'administrator', '$2y$08$rnCngWyQhFLdVJijctNDKuwJZ8o9VfcSsZ9IM9XN71ugxIpQFeCWe', 'administrator@gmail.com', '08124124', NULL, NULL, 'kaldjlas', 2, 1, 'admin20180424102408', '.jpeg', '::1', NULL, NULL, NULL, NULL, NULL, 1685067356, 1524551716, '2023-05-26 09:15:56'),
 (3, 'Batistuta', 'batistuta', '$2y$08$.5EYrM8S8Up0LcpFiEmjauyPVdWOmylLZ.MqM0zBKyDVKniwdVbYi', 'batistuta@gmail.com', '0812412414', 33, 327, 'Jl. Skdlajsdlasjkdl', 4, 1, NULL, NULL, '127.0.0.1', NULL, NULL, NULL, NULL, NULL, 1621257779, 1528634033, '2021-05-17 20:22:59'),
-(4, 'User Premium', 'userpremium', '$2y$08$Wv3MA.DnwTNzBeF62o9neuSXeVdIA/bjlxOzSxtD6DtgStEBn//s.', 'userpremium@gmail.com', '0812412412', 3, 106, 'kaljdklasjdkl', 3, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1621252638, 1531807819, '2021-05-17 18:57:18');
+(4, 'User Premium', 'userpremium', '12345678', 'userpremium@gmail.com', '0812412412', 3, 106, 'kaljdklasjdkl', 3, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1621252638, 1531807819, '2023-05-23 08:59:41'),
+(5, 'bendi', 'bendi', '$2y$08$LCIkv2uYUsJ8ztM36ZiQm.phYthRn1EE0KA17ll9.57haAgB2AmGK', 'bendi@gmail.com', '0987654', 16, 96, 'asdfrtghjknbv', 4, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1686014754, 1684807247, '2023-06-06 08:25:54'),
+(6, 'rifky', 'rifky', '$2y$08$bSCPS8yOSpc4QX8EIRLbL.bFXuxqOo9TemabJhv.09D0n4s6NPr3K', 'rifky@gmail.com', '0987654', 15, 19, 'ghjk', 4, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1684815821, 1684815552, '2023-05-23 11:23:41'),
+(7, 'alfi', 'alfi', '$2y$08$ZjsmUaq9tpAysDrEkevqFOEQnZse4ATFcTNN9FVdeNQPk1XWygmTW', 'alfi@gmail.com', '0987654', NULL, NULL, 'ertyujhgf', 3, 1, 'alfi20230523120211', '.png', '::1', NULL, NULL, NULL, NULL, NULL, 1685070250, 1684818131, '2023-05-26 10:04:10');
 
 -- --------------------------------------------------------
 
@@ -1074,7 +1162,7 @@ INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `phone`, `pr
 CREATE TABLE `users_group` (
   `id_group` int(11) NOT NULL,
   `name_group` char(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users_group`
@@ -1228,7 +1316,7 @@ ALTER TABLE `company`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id_event` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_event` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `foto`
@@ -1258,13 +1346,13 @@ ALTER TABLE `kontak`
 -- AUTO_INCREMENT for table `lapangan`
 --
 ALTER TABLE `lapangan`
-  MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `page`
@@ -1276,7 +1364,7 @@ ALTER TABLE `page`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `subscriber`
@@ -1288,19 +1376,19 @@ ALTER TABLE `subscriber`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
-  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users_group`
