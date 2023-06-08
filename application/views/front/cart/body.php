@@ -236,11 +236,11 @@
 							var subtotal = durasi * harga_per_jam;
   
 							if (jam >= 17) {
-								subtotal += 100000;
+								subtotal += (durasi * 100000);
 							}
 
 							if (jam >= 21) {
-								subtotal += 100000;
+								subtotal += (durasi * 200000);
 							}
   
 							subtotal_el.text(numberWithCommas(subtotal));
@@ -264,11 +264,11 @@
 							var subtotal = durasi * harga_per_jam;
   
 							if (jam >= 17) {
-								subtotal += 100000;
+								subtotal += (durasi * 100000);
 							}
 
 							if (jam >= 21) {
-								subtotal += 100000;
+								subtotal += (durasi * 200000);
 							}
   
 							subtotal_el.text(numberWithCommas(subtotal));

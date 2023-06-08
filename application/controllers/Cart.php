@@ -5,6 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 use Spipu\Html2Pdf\Html2Pdf;
 
+
 class Cart extends CI_Controller
 {
 
@@ -251,37 +252,38 @@ class Cart extends CI_Controller
 
 	public function download_invoice($id)
 	{
-		$row 						= $this->Cart_model->get_by_id($id);
-
+		$row = $this->Cart_model->get_by_id($id);
+	
 		if ($this->session->userdata('user_id') != $row->user_id) {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger alert">Invoice tidak ditemukan</div>');
 			redirect(site_url('cart/history'));
 		}
-
+	
 		if ($row) {
 			ob_start();
-
+	
 			$this->data['cart_finished']	    			= $this->Cart_model->get_cart_per_customer_finished($id)->result();
 			$this->data['cart_finished_row']   			= $this->Cart_model->get_cart_per_customer_finished($id)->row();
-
-			$this->data['data_bank'] 								= $this->Bank_model->get_all();
-
+	
 			$this->load->view('front/cart/download_invoice', $this->data);
-
+	
 			$html = ob_get_contents();
 			$html = '<title style="font-family: freeserif">' . nl2br($html) . '</title>';
 			ob_end_clean();
-
-			$pdf = new HTML2PDF('P', 'A4', 'en', true, 'UTF-8', array(10, 0, 10, 0));
+	
+			$pdf = new Html2Pdf('P', 'A4', 'en', true, 'UTF-8', array(10, 0, 10, 0));
 			$pdf->setDefaultFont('Arial');
 			$pdf->setTestTdInOnePage(false);
 			$pdf->WriteHTML($html);
 			$pdf->Output('download_invoice.pdf');
+	
 		} else {
 			$this->session->set_flashdata('message', "<script>alert('Data tidak ditemukan');</script>");
 			redirect(site_url());
 		}
 	}
+
+	
 
 	public function history()
 	{

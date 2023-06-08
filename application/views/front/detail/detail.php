@@ -1,7 +1,6 @@
-<hr><h3 align="center"><b>DETAIL LAPANGAN</b></h3><hr>
+<hr><h3 align="center"><b><?php echo $lapangan->nama_lapangan; ?></b></h3><hr>
 <div class="row">
 <?php if ($lapangan) { ?>
-        <h2><?php echo $lapangan->nama_lapangan; ?></h2>
         <?php
         if(empty($lapangan->foto)) {
           echo "<img class='card-img-top' src='".base_url()."assets/images/no_image_thumb.png'>";
