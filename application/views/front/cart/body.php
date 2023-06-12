@@ -198,95 +198,83 @@
 				});
 
 				$(document).on("change keyup", ".durasi", function() {
-					durasi_el = $(this);
-					durasi = $(this).val();
+    durasi_el = $(this);
+    durasi = $(this).val();
 
-					if (durasi == "") {
-						durasi = 0;
-						durasi_el.val(durasi);
-					}
+    if (durasi == "") {
+        durasi = 0;
+        durasi_el.val(durasi);
+    }
 
-					jam_mulai_el = durasi_el.parent().parent().find(".jam_mulai");
-					jam_selesai_el = durasi_el.parent().parent().find(".jam_selesai");
+    jam_mulai_el = durasi_el.parent().parent().find(".jam_mulai");
+    jam_selesai_el = durasi_el.parent().parent().find(".jam_selesai");
+    harga_per_jam_el = durasi_el.parent().parent().find(".harga_per_jam");
+    subtotal_el = durasi_el.parent().parent().find(".subtotal");
 
-					harga_per_jam_el = durasi_el.parent().parent().find(".harga_per_jam");
-					subtotal_el = durasi_el.parent().parent().find(".subtotal");
-					
+    if (jam_mulai_el.val() != "") {
+        jam_selesai = moment("01-01-2018 " + jam_mulai_el.val(), "MM-DD-YYYY HH:mm:ss").add(parseInt(durasi), 'hours').format('HH:mm:ss');
+        jam_selesai_el.html(jam_selesai);
 
-					if (jam_mulai_el.val() != "") {
-						jam_selesai = moment("01-01-2018 " + jam_mulai_el.val(), "MM-DD-YYYY HH:mm:ss").add(parseInt(durasi), 'hours').format('HH:mm:ss');
-						jam_selesai_el.html(jam_selesai);
+        harga_per_jam = harga_per_jam_el.html().replace(/,/g, '');
+        harga_per_jam_int = parseInt(harga_per_jam);
 
-						harga_per_jam = harga_per_jam_el.html().replace(/,/g, '');
-						harga_per_jam_int = parseInt(harga_per_jam);
+        subtotal_el.html(numberWithCommas(harga_per_jam_int * parseInt(durasi)));
 
-						subtotal_el.html(numberWithCommas(harga_per_jam_int * parseInt(durasi)));
+        var jam_mulai_el = durasi_el.parent().parent().find(".jam_mulai");
+        var jam_selesai_el = durasi_el.parent().parent().find(".jam_selesai");
+        var harga_per_jam_el = durasi_el.parent().parent().find(".harga_per_jam");
+        var subtotal_el = durasi_el.parent().parent().find(".subtotal");
 
-						var jam_mulai_el = durasi_el.parent().parent().find(".jam_mulai");
-						var jam_selesai_el = durasi_el.parent().parent().find(".jam_selesai");
-						var harga_per_jam_el = durasi_el.parent().parent().find(".harga_per_jam");
-						var subtotal_el = durasi_el.parent().parent().find(".subtotal");
-  
-						if (jam_mulai_el.val() != "") {
-							var jam_mulai = jam_mulai_el.val();
-							var jam_mulai_parts = jam_mulai.split(":");
-							var jam = parseInt(jam_mulai_parts[0]);
-  
-							var harga_per_jam = parseInt(harga_per_jam_el.text().replace(/,/g, ''));
-							var subtotal = durasi * harga_per_jam;
-  
-							if (jam >= 17) {
-								subtotal += (durasi * 100000);
-							}
+        if (jam_mulai_el.val() != "") {
+            var jam_mulai = jam_mulai_el.val();
+            var jam_mulai_parts = jam_mulai.split(":");
+            var jam = parseInt(jam_mulai_parts[0]);
 
-							if (jam >= 21) {
-								subtotal += (durasi * 200000);
-							}
-  
-							subtotal_el.text(numberWithCommas(subtotal));
-						}
+            var harga_per_jam = parseInt(harga_per_jam_el.text().replace(/,/g, ''));
+            var subtotal = durasi * harga_per_jam;
 
-						subtotal_bawah = 0;
-						$('.subtotal').each(function(i, obj) {
-							a_subtotal_html = $(this).html().trim().replace(/,/g, '');
-							if (a_subtotal_html == "") {
-								a_subtotal_html = "0";
-							}
+            if (jam >= 14 && jam < 17) {
+                subtotal += (durasi * 20000);
+            }
 
-							a_subtotal_html_int = parseInt(a_subtotal_html);
-							subtotal_bawah += a_subtotal_html_int ;
-							if (jam_mulai_el.val() != "") {
-							var jam_mulai = jam_mulai_el.val();
-							var jam_mulai_parts = jam_mulai.split(":");
-							var jam = parseInt(jam_mulai_parts[0]);
-  
-							var harga_per_jam = parseInt(harga_per_jam_el.text().replace(/,/g, ''));
-							var subtotal = durasi * harga_per_jam;
-  
-							if (jam >= 17) {
-								subtotal += (durasi * 100000);
-							}
+			if (jam >= 17 && jam < 22) {
+                subtotal += (durasi * 40000);
+            }
 
-							if (jam >= 21) {
-								subtotal += (durasi * 200000);
-							}
-  
-							subtotal_el.text(numberWithCommas(subtotal));
-						}
-						});
+            if (jam >= 22) {
+                subtotal += (durasi * 20000);
+            }
 
-						<?php if ($this->session->userdata('usertype') == '3') {
-							echo "var disc = '" . $diskon['harga'] . "';"; ?>
-						<?php } else {
-							echo "var disc = '0';";
-						} ?>
+			if (jam >= 24 ) {
+                subtotal += (durasi * 50000);
+            }
 
-						var diskon = $('#diskon').val();
+            subtotal_el.text(numberWithCommas(subtotal));
+        }
 
-						$("#subtotal_bawah").html(numberWithCommas(subtotal_bawah));
-						$("#diskon").html(numberWithCommas(disc));
-						var gtotal = (subtotal_bawah - disc);
-						$("#grandtotal").html(numberWithCommas(gtotal));
+        subtotal_bawah = 0;
+        $('.subtotal').each(function(i, obj) {
+            a_subtotal_html = $(this).html().trim().replace(/,/g, '');
+            if (a_subtotal_html == "") {
+                a_subtotal_html = "0";
+            }
+
+            a_subtotal_html_int = parseInt(a_subtotal_html);
+            subtotal_bawah += a_subtotal_html_int;
+        });
+
+        <?php if ($this->session->userdata('usertype') == '3') {
+            echo "var disc = '" . $diskon['harga'] . "';";
+        } else {
+            echo "var disc = '0';";
+        } ?>
+
+        var diskon = $('#diskon').val();
+
+        $("#subtotal_bawah").html(numberWithCommas(subtotal_bawah));
+        $("#diskon").html(numberWithCommas(disc));
+        var gtotal = (subtotal_bawah - disc);
+        $("#grandtotal").html(numberWithCommas(gtotal));	
 
 							
 					}
