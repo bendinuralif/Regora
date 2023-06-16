@@ -232,22 +232,23 @@
 
             var harga_per_jam = parseInt(harga_per_jam_el.text().replace(/,/g, ''));
             var subtotal = durasi * harga_per_jam;
+			if ((lapangan_id_el.val() != 2 && lapangan_id_el.val() != 3) || (lapangan_id_el.val() == 2 && jam < 14) || (lapangan_id_el.val() == 3 && jam < 14)) {	
+				if (jam >= 14 && jam < 17) {
+					subtotal += (durasi * 20000);
+				}
 
-            if (jam >= 14 && jam < 17) {
-                subtotal += (durasi * 20000);
-            }
+				if (jam >= 17 && jam < 22) {
+					subtotal += (durasi * 40000);
+				}
 
-			if (jam >= 17 && jam < 22) {
-                subtotal += (durasi * 40000);
-            }
+				if (jam >= 22) {
+					subtotal += (durasi * 20000);
+				}
 
-            if (jam >= 22) {
-                subtotal += (durasi * 20000);
-            }
-
-			if (jam >= 24 ) {
-                subtotal += (durasi * 50000);
-            }
+				if (jam >= 24 ) {
+					subtotal += (durasi * 50000);
+				}
+			}	
 
             subtotal_el.text(numberWithCommas(subtotal));
         }
@@ -284,3 +285,5 @@
 	</div>
 </div>
 <?php $this->load->view('front/footer'); ?>
+
+
