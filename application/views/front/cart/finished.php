@@ -17,7 +17,7 @@
     <div class="col-lg-12"><h1>TRANSAKSI SELESAI</h1><hr>
 			<h4>INVOICE NO. <?php echo $cart_finished_row->id_invoice ?> (<font color='red'>BELUM LUNAS</font>)</h4>
 			<?php echo form_open('cart/download_invoice/'.$cart_finished_row->id_trans, array("target"=>"_blank")) ?>
-				<button type="submit" name="download_invoice" class="btn btn-sm btn-success">Download Invoice</button>
+				<button type="submit" name="download_invoice" onclick="window.print()" class="btn btn-sm btn-success">Download Invoice</button>
 			<?php echo form_close() ?>
 			<br>
 			<div class="row">
