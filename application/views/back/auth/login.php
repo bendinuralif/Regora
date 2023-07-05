@@ -19,7 +19,7 @@
   <body class="login-page">
     <div class="login-box">
       <div class="login-logo">
-        <b>System</b> Panel
+        <b>Admin REGORA</b> Panel
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <?php echo $message;?>
