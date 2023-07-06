@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-md-8"><h1><?php echo strtoupper($event_detail->nama_event) ?></h1>
 			<a href="<?php echo base_url('assets/images/event/').$event_detail->foto.$event_detail->foto_type ?>" title="<?php echo $event_detail->nama_event ?>">
-				<img src="<?php echo base_url('assets/images/event/').$event_detail->foto.'_thumb'.$event_detail->foto_type ?>" alt="<?php echo $event_detail->nama_event ?>" class="img-responsive">
+				<img src="<?php echo base_url('assets/images/event/').$event_detail->foto.$event_detail->foto_type ?>" alt="<?php echo $event_detail->nama_event ?>" class="img-responsive">
 			</a>
 
 	    <i class="fa fa-user"></i> <?php echo $event_detail->created_by ?></a> | <i class="fa fa-calendar"></i> <?php echo date("j F Y", strtotime($event_detail->created_at)); ?>

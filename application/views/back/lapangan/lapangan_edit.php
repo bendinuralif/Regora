@@ -29,6 +29,12 @@
                   <div class="form-group"><label>Harga Per Jam</label>
                     <?php echo form_input($harga, $lapangan->harga);?>
                   </div>
+                  <div class="form-group"><label>Fasilitas</label>
+                    <?php echo form_input($fasilitas);?>
+                  </div>
+                  <div class="form-group"><label>Deskripsi</label>
+                    <?php echo form_input($deskripsi);?>
+                  </div>
                   <div class="form-group"><label>Foto Sebelumnya</label><br>
                     <img src="<?php echo base_url('assets/images/lapangan/'.$lapangan->foto.'') ?>" width="300px" class="img-responsive"/>
                   </div>

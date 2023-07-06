@@ -10,7 +10,7 @@
       </button>
       <div class="col-lg-4">
         <a href="<?php echo base_url() ?>" class="logo">
-          <img src="<?php echo base_url('assets/images/company/logo.png'); ?>" alt="JSOFT" width="150px" style="display: block; margin: 7px auto;">
+          <img src="<?php echo base_url('assets/images/company/REGORA.png'); ?>" alt="JSOFT" width="150px" style="display: block; margin: 10px auto;">
         </a>
       </div>
     </div>
@@ -23,9 +23,6 @@
         </li>
         <li class="<?php if($this->uri->segment(1) == "event"){echo "active";} ?>">
           <a href="<?php echo base_url('event') ?>"> Event</a>
-        </li>
-        <li class="<?php if($this->uri->segment(1) == "gallery"){echo "active";} ?>">
-          <a href="<?php echo base_url('gallery/album') ?>"> Foto</a>
         </li>
         <li class="dropdown <?php if($this->uri->segment(1) == "about" or $this->uri->segment(1) == "contact"){echo "active";} ?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
