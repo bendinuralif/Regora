@@ -7,7 +7,7 @@
           <a href="<?php echo base_url("event/$event->slug_event ") ?>">
             <?php
             if(empty($event->foto)) {echo "<img src='".base_url()."assets/images/no_image_thumb.png'>";}
-            else { echo " <img src='".base_url()."assets/images/event/".$event->foto.'_thumb'.$event->foto_type."'> ";}
+            else { echo " <img src='".base_url()."assets/images/event/".$event->foto.$event->foto_type."'> ";}
             ?>
           </a>
         </div>
