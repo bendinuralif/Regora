@@ -250,17 +250,11 @@
 								}
 							}
 
-<<<<<<< HEAD
-							subtotal_el.text(numberWithCommas(subtotal));
-						}
-=======
-
             subtotal_el.text(numberWithCommas(subtotal));
 			var gtotal = (subtotal_bawah - subtotal_el);
 			
         }
-		
->>>>>>> 7a6623e823bf9e2c809a973003fd7bcc38156475
+		    
 
 						subtotal_bawah = 0;
 						$('.subtotal').each(function(i, obj) {
@@ -273,7 +267,6 @@
 							subtotal_bawah += a_subtotal_html_int;
 						});
 
-<<<<<<< HEAD
 						<?php if ($this->session->userdata('usertype') == '3') {
 							echo "var disc = '" . $diskon['harga'] . "';";
 						} else {
@@ -286,15 +279,6 @@
 						$("#diskon").html(numberWithCommas(disc));
 						var gtotal = (subtotal_bawah - disc);
 						$("#grandtotal").html(numberWithCommas(gtotal));
-=======
-        <?php if ($this->session->userdata('usertype') == '5') {
-            echo "var disc = '" . $diskon['harga'] . "';";
-        } else {
-            echo "var disc = '0';";
-        } ?>
-
-		var disc = '<?php echo isset($diskon['harga']) ? $diskon['harga'] : 0; ?>';
->>>>>>> 7a6623e823bf9e2c809a973003fd7bcc38156475
 
 
 					}
