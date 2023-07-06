@@ -14,7 +14,13 @@
         <div class="caption">
           <a href="<?php echo $url_detail; ?>">
             <p class="card-text"><b><?php echo $lapangan->nama_lapangan ?></b></p>
+            
           </a>
+          <?php
+          $harga_rupiah = number_format($lapangan->harga, 0, ',', '.');
+          echo 'Rp. '.$harga_rupiah . ' ,-';
+          ?>
+
           <hr>
           <a href="<?php echo base_url('cart/buy/').$lapangan->id_lapangan ?>">
             <button class="btn btn-sm btn-primary"><i class="fa fa-shopping-cart"></i> Booking Sekarang!</button>

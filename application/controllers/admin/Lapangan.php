@@ -52,6 +52,15 @@ class Lapangan extends CI_Controller
       'value' => $this->form_validation->set_value('fasilitas'),
       'required'    => '',
     );
+    $this->data['deskripsi'] = array(
+      'name'  => 'deskripsi',
+      'id'    => 'deskripsi',
+      'type'  => 'text',
+      'class' => 'form-control',
+      'value' => $this->form_validation->set_value('deskripsi'),
+      'required'    => '',
+    );
+
 
     $this->load->view('back/lapangan/lapangan_add', $this->data);
   }
@@ -108,6 +117,7 @@ class Lapangan extends CI_Controller
 
             $data = array(
               'nama_lapangan'   => $this->input->post('nama_lapangan'),
+              'deskripsi'   => $this->input->post('deskripsi'),
               'harga'           => $this->input->post('harga'),
               'fasilitas'       => $this->input->post('fasilitas'),
               'foto'            => $nmfile.$foto['file_ext'],
@@ -128,6 +138,7 @@ class Lapangan extends CI_Controller
       {
         $data = array(
           'nama_lapangan'   => $this->input->post('nama_lapangan'),
+          'deskripsi'   => $this->input->post('deskripsi'),
           'harga'           => $this->input->post('harga'),
           'fasilitas'       => $this->input->post('fasilitas'),
           'created_by'      => $this->session->userdata('username')
@@ -179,6 +190,13 @@ class Lapangan extends CI_Controller
       $this->data['fasilitas'] = array(
         'name'  => 'fasilitas',
         'id'    => 'fasilitas',
+        'type'  => 'text',
+        'class' => 'form-control',
+        'required'    => '',
+      );
+      $this->data['deskripsi'] = array(
+        'name'  => 'deskripsi',
+        'id'    => 'deskripsi',
         'type'  => 'text',
         'class' => 'form-control',
         'required'    => '',
@@ -259,6 +277,7 @@ class Lapangan extends CI_Controller
 
               $data = array(
                 'nama_lapangan'   => $this->input->post('nama_lapangan'),
+                'deskripsi'   => $this->input->post('deskripsi'),
                 'harga'           => $this->input->post('harga'),
                 'fasilitas'       => $this->input->post('fasilitas'),
                 'foto'            => $nmfile.$foto['file_ext'],
@@ -278,6 +297,7 @@ class Lapangan extends CI_Controller
           {
             $data = array(
               'nama_lapangan'   => $this->input->post('nama_lapangan'),
+              'deskripsi'   => $this->input->post('deskripsi'),
               'harga'           => $this->input->post('harga'),
               'fasilitas'       => $this->input->post('fasilitas'),
               'modified_by'     => $this->session->userdata('username')
