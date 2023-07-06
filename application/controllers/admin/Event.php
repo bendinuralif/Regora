@@ -106,6 +106,7 @@ class Event extends CI_Controller
 
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
+       
 
             $data = array(
               'nama_event'    => $this->input->post('nama_event'),
