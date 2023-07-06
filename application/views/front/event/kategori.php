@@ -15,7 +15,7 @@
 				<a href="<?php echo base_url("event/$kategori->slug_event ") ?>">
 					<?php
 					if(empty($kategori->foto)) {echo "<img class='img-responsive' src='".base_url()."assets/images/no_image_thumb.png'>";}
-					else { echo " <img class='img-responsive' src='".base_url()."assets/images/event/".$kategori->foto.'_thumb'.$kategori->foto_type."'> ";}
+					else { echo " <img class='img-responsive' src='".base_url()."assets/images/event/".$kategori->foto.$kategori->foto_type."'> ";}
 					?>
 				</a>
 				<p>
