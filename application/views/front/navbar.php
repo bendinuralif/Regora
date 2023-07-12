@@ -7,10 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo base_url() ?>">
-        <img src="<?php echo base_url('assets/images/company/').$company_data->foto.$company_data->foto_type ?>" alt="<?php echo $company_data->company_name ?>" width="100px">
-      </a>
+        </button>
+      <div class="col-lg-4">
+        <a href="<?php echo base_url() ?>" class="logo">
+          <img src="<?php echo base_url('assets/images/company/REGORA.png'); ?>" alt="JSOFT" width="150px" style="display: block; margin: 10px auto;">
+        </a>
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -22,9 +24,9 @@
         <li class="<?php if($this->uri->segment(1) == "event"){echo "active";} ?>">
           <a href="<?php echo base_url('event') ?>"> Event</a>
         </li>
-        <li class="<?php if($this->uri->segment(1) == "gallery"){echo "active";} ?>">
+        <!-- <li class="<?php if($this->uri->segment(1) == "gallery"){echo "active";} ?>">
           <a href="<?php echo base_url('gallery/album') ?>"> Foto</a>
-        </li>
+        </li> -->
         <li class="dropdown <?php if($this->uri->segment(1) == "about" or $this->uri->segment(1) == "contact"){echo "active";} ?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
           <ul class="dropdown-menu">
