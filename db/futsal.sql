@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 09:37 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Waktu pembuatan: 12 Jul 2023 pada 15.18
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `album`
+-- Struktur dari tabel `album`
 --
 
 CREATE TABLE `album` (
@@ -39,22 +39,22 @@ CREATE TABLE `album` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `album`
+-- Dumping data untuk tabel `album`
 --
 
 INSERT INTO `album` (`id_album`, `nama_album`, `slug_album`, `foto`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Percobaan', 'percobaan', 'percobaan20180411012221.jpg', 'amperakoding', '2018-04-11 06:14:08', 'amperakoding', '2021-05-17 19:57:25'),
-(2, 'Percobaan ke2', 'percobaan-ke2', 'percobaan-ke220180414141810.jpg', 'amperakoding', '2018-04-11 06:20:52', 'amperakoding', '2021-05-17 19:57:25'),
-(3, 'Coba Lagi', 'coba-lagi', 'coba-lagi20180414141800.jpg', 'amperakoding', '2018-04-11 06:23:01', 'amperakoding', '2021-05-17 19:57:25'),
-(4, 'Lagi coba', 'lagi-coba', 'lagi-coba20180414141618.jpg', 'amperakoding', '2018-04-11 06:23:11', 'amperakoding', '2021-05-17 19:57:25'),
-(5, 'Scenery', 'scenery', 'scenery20180414141646.jpg', 'amperakoding', '2018-04-14 19:16:46', 'amperakoding', '2021-05-17 19:57:28'),
-(6, 'Lake House', 'lake-house', 'lake-house20180414141705.jpg', 'amperakoding', '2018-04-14 19:17:05', 'amperakoding', '2021-05-17 19:57:28'),
-(7, 'House', 'house', 'house20180414141719.jpg', 'amperakoding', '2018-04-14 19:17:19', 'amperakoding', '2021-05-17 19:57:28');
+(1, 'Lapangan Futsal', 'lapangan-futsal', 'lapangan-futsal20230608224443.jpg', 'amperakoding', '2018-04-11 06:14:08', 'superadmin', '2023-06-08 22:44:43'),
+(2, 'Kolam Renang', 'kolam-renang', 'kolam-renang20230608225347.jpg', 'amperakoding', '2018-04-11 06:20:52', 'superadmin', '2023-06-08 22:53:47'),
+(3, 'Coba Lagi', 'coba-lagi', 'coba-lagi20180414141800.jpg', 'amperakoding', '2018-04-11 06:23:01', 'Bendi', '2023-06-17 13:37:47'),
+(4, 'Lagi coba', 'lagi-coba', 'lagi-coba20180414141618.jpg', 'amperakoding', '2018-04-11 06:23:11', 'Rifkt', '2023-06-17 13:37:57'),
+(5, 'Scenery', 'scenery', 'scenery20180414141646.jpg', 'amperakoding', '2018-04-14 19:16:46', 'Ganang', '2023-06-17 13:38:03'),
+(6, 'Lake House', 'lake-house', 'lake-house20180414141705.jpg', 'amperakoding', '2018-04-14 19:17:05', 'Oci', '2023-06-17 13:38:10'),
+(7, 'House', 'house', 'house20180414141719.jpg', 'amperakoding', '2018-04-14 19:17:19', 'Villa', '2023-06-17 13:38:23');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bank`
+-- Struktur dari tabel `bank`
 --
 
 CREATE TABLE `bank` (
@@ -66,19 +66,19 @@ CREATE TABLE `bank` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `bank`
+-- Dumping data untuk tabel `bank`
 --
 
 INSERT INTO `bank` (`id_bank`, `nama_bank`, `atas_nama`, `norek`, `logo`) VALUES
-(1, 'BNI', 'Microtron', '12345678', 'bni.png'),
-(2, 'BRI', 'Microtron', '87873412323', 'bri.png'),
-(3, 'Mandiri', 'Microtron', '778734098', 'mandiri.png'),
-(4, 'BCA', 'Microtron', '998980342487', 'bca.png');
+(1, 'BNI', 'Rifky Ganteng', '12345678', 'bni.png'),
+(2, 'BRI', 'Rifky Ganteng', '87873412323', 'bri.png'),
+(3, 'Mandiri', 'Rifky Ganteng', '778734098', 'mandiri.png'),
+(4, 'BCA', 'Rifky Ganteng', '998980342487', 'bca.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `company`
+-- Struktur dari tabel `company`
 --
 
 CREATE TABLE `company` (
@@ -100,16 +100,16 @@ CREATE TABLE `company` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `company`
+-- Dumping data untuk tabel `company`
 --
 
 INSERT INTO `company` (`id_company`, `company_name`, `company_desc`, `company_address`, `company_maps`, `company_phone`, `company_phone2`, `company_fax`, `company_email`, `foto`, `foto_type`, `created`, `modified`, `created_by`, `modified_by`) VALUES
-(1, 'REGORA', 'REGORA didirikan pada tahun 2010 oleh sekelompok individu dengan minat dalam olahraga dan teknologi informasi. Perusahaan ini fokus pada pengembangan sistem aplikasi penyewaan tempat olahraga secara online. Setelah melakukan riset dan pengujian, REGORA meluncurkan platform aplikasi yang mudah digunakan.\nPerkembangan REGORA menarik minat banyak tempat olahraga terkemuka, membentuk kemitraan untuk meningkatkan pelayanan dan efisiensi operasional. Seiring waktu, REGORA terus berinovasi dalam industri aplikasi penyewaan tempat olahraga, memperluas jaringan mitra, dan meningkatkan fitur aplikasi.\nDengan dedikasi terhadap inovasi, REGORA telah menjadi pemain utama dalam industri ini, memberikan kemudahan akses dan efisiensi dalam menyewa tempat olahraga. Mereka terus berupaya memberikan pengalaman terbaik bagi pengguna dan mendorong pertumbuhan industri olahraga secara keseluruhan.', 'Jl. Maju Mundur Kec. Camat Kel. Lurahan, Kab. Bupaten, Dunia Lain', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16327777.649419477!2d108.84621849858628!3d-2.415291213289622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1506312173230\" width=\"100%\" height=\"200\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '081241412', '0711412402', '12414', 'toko@gmail.com', 'company-profile20180414070824', '.PNG', '2017-11-09 06:45:34', NULL, 'amperakoding', 'amperakoding');
+(1, 'REGORA', 'REGORA didirikan pada tahun 2010 oleh sekelompok individu dengan minat dalam olahraga dan teknologi informasi. Perusahaan ini fokus pada pengembangan sistem aplikasi penyewaan tempat olahraga secara online. Setelah melakukan riset dan pengujian, REGORA meluncurkan platform aplikasi yang mudah digunakan.\nPerkembangan REGORA menarik minat banyak tempat olahraga terkemuka, membentuk kemitraan untuk meningkatkan pelayanan dan efisiensi operasional. Seiring waktu, REGORA terus berinovasi dalam industri aplikasi penyewaan tempat olahraga, memperluas jaringan mitra, dan meningkatkan fitur aplikasi.\nDengan dedikasi terhadap inovasi, REGORA telah menjadi pemain utama dalam industri ini, memberikan kemudahan akses dan efisiensi dalam menyewa tempat olahraga. Mereka terus berupaya memberikan pengalaman terbaik bagi pengguna dan mendorong pertumbuhan industri olahraga secara keseluruhan.', 'Jl. Maju Mundur Kec. Camat Kel. Lurahan, Kab. , Dunia Lain', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16327777.649419477!2d108.84621849858628!3d-2.415291213289622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1506312173230\" width=\"100%\" height=\"200\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '081241412', '0711412402', '12414', 'regora@gmail.com', 'company-profile20180414070824', '.PNG', '2017-11-09 06:45:34', NULL, 'amperakoding', 'amperakoding');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diskon`
+-- Struktur dari tabel `diskon`
 --
 
 CREATE TABLE `diskon` (
@@ -118,7 +118,7 @@ CREATE TABLE `diskon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `diskon`
+-- Dumping data untuk tabel `diskon`
 --
 
 INSERT INTO `diskon` (`id`, `harga`) VALUES
@@ -127,7 +127,7 @@ INSERT INTO `diskon` (`id`, `harga`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event`
+-- Struktur dari tabel `event`
 --
 
 CREATE TABLE `event` (
@@ -145,22 +145,19 @@ CREATE TABLE `event` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `event`
+-- Dumping data untuk tabel `event`
 --
 
 INSERT INTO `event` (`id_event`, `nama_event`, `slug_event`, `deskripsi`, `kategori`, `foto`, `foto_type`, `created_at`, `created_by`, `modified_at`, `modified_by`) VALUES
-(2, 'What is Lorem Ipsum?', 'what-is-lorem-ipsum', '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p><img src=\"http://localhost/olshop2/assets/images/upload/Screenshot_from_2018-03-22_20-37-321.png\" width=\"500\" height=\"200\"></p>\r\n<p>Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>', 1, 'what-is-lorem-ipsum20180723083417', '.jpg', '2018-04-02 20:21:59', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(3, 'Why do we use it?', 'why-do-we-use-it', '<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>\r\n<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>', 2, 'why-do-we-use-it20180723083427', '.jpg', '2018-04-02 21:13:48', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(4, 'Where does it come from?', 'where-does-it-come-from', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>\r\n<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>', 1, 'where-does-it-come-from20180723083441', '.jpg', '2018-04-02 21:14:39', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(5, 'Where does it come froms?', 'where-does-it-come-froms', '<p>What is Lorem Ipsum?<br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n<p>Why do we use it?<br>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>\r\n<p>Where does it come from?<br>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>', 1, 'where-does-it-come-froms20180723083339', '.jpg', '2018-04-03 10:03:54', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(6, 'Aliquam ullamcorper', 'aliquam-ullamcorper', '<p>Aliquam ullamcorper magna consectetur augue laoreet luctus. Duis id nisi eleifend, vestibulum justo eget, scelerisque purus. Pellentesque non risus nec eros ultricies euismod. Donec ullamcorper auctor diam ut fermentum. Maecenas mollis neque magna. Pellentesque blandit arcu mi, vel consequat orci dapibus vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus rutrum, risus vitae venenatis efficitur, arcu metus blandit erat, quis pharetra neque leo non quam. Vestibulum imperdiet eleifend rhoncus. Nunc condimentum tellus vel ullamcorper iaculis. Vivamus vitae lorem sem.</p>\r\n<p>Donec lorem diam, rhoncus at tempus eget, dignissim quis nulla. Donec consequat malesuada lacinia. Mauris eget ipsum eget mauris tristique lobortis vel vel turpis. Pellentesque accumsan metus nisi, non molestie diam hendrerit eu. Sed eget lacinia elit. Nulla lobortis diam sed nunc malesuada cursus. Mauris ac maximus tellus.</p>', 2, 'aliquam-ullamcorper20180723083358', '.png', '2018-04-03 11:08:48', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(7, 'In fermentum scelerisqu', 'in-fermentum-scelerisqu', '<p>In fermentum scelerisque neque. Integer fermentum semper lacinia. Donec porttitor accumsan sem, eget fringilla nisl blandit a. Nam pulvinar faucibus velit, eget vestibulum erat aliquet ac. Maecenas imperdiet felis vitae orci laoreet fermentum. Fusce dui neque, volutpat ac fermentum quis, maximus id diam. Nullam eros urna, tempus tempor vehicula sit amet, sollicitudin quis massa. Mauris metus ex, eleifend nec aliquam a, ullamcorper et leo. Sed convallis, est vitae tincidunt ultrices, orci diam hendrerit magna, ut molestie dui nisl non quam.</p>\r\n<p>Pellentesque in egestas tellus, eget cursus odio. Morbi mollis diam turpis, id luctus leo consequat eu. Integer felis neque, iaculis eget vulputate et, congue pharetra elit. Morbi lacinia lacus vel elit suscipit euismod. Ut tellus leo, sodales ac suscipit in, semper eget sem. Curabitur ultrices, sem id dapibus semper, lectus erat vehicula magna, eu accumsan tellus leo at orci. Fusce rutrum tincidunt tristique. Suspendisse ac cursus libero. Donec aliquet accumsan ex in dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vel dignissim velit. Vestibulum mattis malesuada euismod. Praesent in vehicula dui, sit amet fringilla leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec imperdiet hendrerit neque, at ultricies neque eleifend in.</p>\r\n<p>Sed rutrum egestas diam, vitae sodales odio vulputate id. Phasellus felis risus, varius eget dolor ac, fringilla dapibus risus. Pellentesque ante nulla, egestas ac fermentum suscipit, aliquam ac eros. Mauris elementum justo nec leo imperdiet hendrerit. Praesent ut augue sit amet massa sollicitudin maximus quis eget augue. Etiam malesuada dictum sem, ut ullamcorper diam mattis ut. Morbi non imperdiet ante, ac fermentum justo. Nulla congue magna vel lectus elementum laoreet. Suspendisse ante ipsum, eleifend vel condimentum eu, varius non dolor.</p>', 1, 'in-fermentum-scelerisqu20180413030957', '.jpeg', '2018-04-03 11:11:51', 'amperakoding', '2021-05-17 19:58:08', 'amperakoding'),
-(8, 'karnaval', 'karnaval', '<p>vvvjhhjbjjknkn</p>', 2, NULL, NULL, '2023-05-30 11:59:36', 'superadmin', NULL, '');
+(9, 'AFC U-20 2023', 'afc-u-20-2023', '<p>AFC U-20 2023 sebentar lagi akan di selenggarakan tanggal 1 – 18 Maret. Kabar baik buat kamu para Sport Mania, yang sedang mencari tayangan olahraga. MNC Vision akan memberikan tayangan menarik sepanjang tahun 2023.</p>\r\n<p>Tahun 2023 akan menjadi tahun yang sangat sibuk bagi para pecinta olahraga. Berbagai event olahraga Asia akan diselenggarakan pada tahun tersebut. Dari event olahraga tingkat Sea Games hingga ke event olahraga tingkat dunia, semuanya akan digelar di tahun 2023.</p>\r\n<p>Beberapa event olahraga yang akan diselenggarakan pada tahun 2023 antara lain AFC U-20 2023, AFC U-17 2023, Sea Games 2023, dan Asian Games 2022. Keempat event olahraga ini sangat ditunggu oleh pecinta olahraga di seluruh dunia, dan menjadi ajang untuk menunjukkan kemampuan para atlet di ASEAN Maupun Asia.</p>\r\n<p>Yuk intip daftar Event Olahraga yang akan di selenggarakan tahun 2023!</p>\r\n<p>1. AFC U-20 2023</p>\r\n<p>AFC U-20 2023 adalah sebuah turnamen sepak bola internasional yang diadakan oleh Konfederasi Sepak Bola Asia (AFC) untuk kategori usia di bawah 20 tahun. Turnamen ini dijadwalkan akan diselenggarakan di Uzbekistan pada 1 – 18 Maret 2023 dan akan menjadi edisi ke-41 dari turnamen tersebut. Di turnamen ini, akan berpartisipasi 16 tim dari seluruh Asia yang akan bersaing untuk meraih gelar juara.</p>\r\n<p>Kejuaraan ini menjadi peluang bagi pelatih Shin Tae Yong untuk memperlihatkan keterampilan mereka dan mendapatkan pengalaman bermain dalam skala Asia. Selain itu, turnamen ini juga akan menjadi ajang untuk para pelatih untuk mengevaluasi talenta baru dan mencari pemain muda yang berpotensi untuk dipromosikan ke level tim nasional senior.</p>\r\n<p>2. AFC U-17 2023</p>\r\n<p>Piala Asia U-17 AFC 2023 akan menjadi edisi ke-19 dari Piala Asia U-17 AFC (termasuk edisi sebelumnya dari Kejuaraan AFC U-16 dan Kejuaraan AFC U-17), kejuaraan sepak bola remaja internasional dua tahunan yang diselenggarakan oleh Konfederasi Sepak Bola Asia (AFC) untuk tim nasional U-17 putra di Asia.</p>\r\n<p>Timnas Indonesia gagal lolos ke ajang ini karena dikalahkan Malaysia 1-5 di Stadion Pakansari, Bogor. Hasil itu membuat indonesia menjadi runner up grup B. Sebenarnya, Indonesia masih berkesempatan lols melalui jalur runner up tetapi Garuda Muda hanya menempati posisi ke-7 dari 1 tim runner up.</p>\r\n<p>Negera lolos Piala Asia AFC U-17 2023 antara lain, Jepang, Malaysia, Qatar, Arab Saudi, Yaman, Vietnam, Australia, Tajikistan, Iran, Uzbekistan, Korea Selatan, China, Afghanistan, India, Thailand.</p>\r\n<p>3. AFC Asian Cup</p>\r\n<p>Piala Asia AFC 2023 akan menjadi edisi ke-18 Piala Asia AFC, kejuaraan sepak bola pria internasional empat tahunan di Asia yang diselenggarakan oleh Konfederasi Sepak Bola Asia (AFC). Ini akan melibatkan 24 tim nasional setelah ekspansi pada 2019, dengan Qatar sebagai juara bertahan.</p>\r\n<p>Turnamen ini awalnya dijadwalkan diadakan di Tiongkok dari 16 Juni hingga 16 Juli 2023. Pada 14 Mei 2022, AFC mengumumkan bahwa Tiongkok tidak akan menjadi tuan rumah turnamen tersebut karena keadaan yang disebabkan oleh pandemi COVID-19 dan kebijakan Nol-COVID Tiongkok. .</p>\r\n<p>Pada 17 Oktober, AFC mengumumkan bahwa turnamen tersebut akan diadakan di Qatar. Qatar akan menjadi negara pertama yang menjadi tuan rumah tiga Piala Asia, setelah 1988 dan 2011.</p>\r\n<p>4. Sea Games 2023</p>\r\n<p>The 2023 Southeast Asian Games atau Sea Games akan menjadi Pesta Olahraga Asia Tenggara edisi ke-32, acara olahraga multi-olahraga dua tahunan yang akan diadakan dari 5 - 17 Mei 2023 di Phnom Penh, Kamboja.</p>\r\n<p>Pengumuman tersebut disampaikan pada pertemuan Dewan Federasi SEA Games di Singapura, bersamaan dengan Pesta Olahraga Asia Tenggara 2015, oleh Presiden Komite Olimpiade Nasional Kamboja, Thong Khon. Filipina awalnya dijadwalkan menjadi tuan rumah Olimpiade, tetapi diundur hingga 2019 setelah Brunei mencabut hak tuan rumah aslinya.</p>\r\n<p>Ini akan menjadi pertama kalinya Kamboja menjadi tuan rumah pertandingan tersebut, karena Pertandingan Semenanjung Asia Tenggara (SEAP) ke-3 pada tahun 1963 dibatalkan karena situasi politik di negara tersebut saat itu.</p>\r\n<p>5. Asian Games 2022</p>\r\n<p>Asian Games 2022 akan menjadi acara multi-olahraga yang dirayakan di Hangzhou, Zhejiang, Tiongkok. Hangzhou akan menjadi kota China ketiga yang menjadi tuan rumah Asian Games, setelah Beijing pada 1990 dan Guangzhou pada 2010. 45 negara akan ikut dalam kejuaraan ini.</p>\r\n<p>Olimpiade awalnya dijadwalkan berlangsung dari 10 hingga 25 September 2022, tetapi acara tersebut ditunda karena pandemi COVID-19 pada 6 Mei karena kekhawatiran bepergian ke daratan Tiongkok, di tengah potensi ancaman varian COVID-19. Pada 19 Juli 2022, tanggal baru diumumkan dari 23 September hingga 8 Oktober 2023.</p>\r\n<p>Jangan lewatkan Event – Event olahraga yang bisa kamu saksikan dari rumah lewat MNC Vision.</p>\r\n<p>Yuk berlangganan! Segera aktifkan Paket Sports Mania mulai dari Rp 69.000/30 hari. Berlangganan bisa klik disini, atau mau melihat Jadwal Programnya bisa juga klik disini.</p>\r\n<p>Kamu bisa nonton Kapan Pun Di Mana Pun melalui Vision+! Segera unduh aplikasi Vision+ di Google Play Store atau App Store di sini serta kunjungi www.visionplus.id Untuk informasi lebih lanjut mengenai Vision+, silakan mengikuti akun media sosial resmi Vision+ di @visionplusid (Facebook, Instagram, Twitter, TikTok).</p>\r\n<p>Masih mau pakai yang KW?</p>\r\n<p>Nonton channel-channel MNC Group yang ORI dengan Kualitas HD, MNC Vision jawabannya!</p>\r\n<p>Berlangganan Sekarang</p>\r\n<p>WhatsApp Interaktif 24 Jam: 08991500686</p>\r\n<p>(021) 21 500 900</p>', 1, 'afc-u-20-202320230706132844', '.jpeg', '2023-07-06 13:08:07', 'superadmin', '2023-07-06 13:28:44', 'superadmin'),
+(14, 'Indonesia Masters 2023', 'indonesia-masters-2023', '<p>Indonesia Masters 2023 adalah event olahraga dunia yang digelar di Indonesia untuk membuka tahun 2023. Indonesia Masters 2023 adalah salah satu rangkaian gelaran tour BWF di bidang olahraga bulu tangkis. </p>\r\n<p>Turnamen Super 500 BWF ini digelar di Istora Senayan, Jakarta mulai tanggal 24 sampai dengan 29 Januari 2023. Gelaran ini baru saja selesai dihelat dan sudah melahirkan nama - nama juara baru. </p>\r\n<p>Hasilnya Indonesia meraih dua gelar juara Indonesia Masters di nomor ganda putra dan tunggal putra. Ganda putra dimenangkan oleh pasangan Leo Rolly Carnando/Daniel Marthin, di tunggal putra ada nama Jonatan Christie. </p>', 1, 'indonesia-masters-202320230706144825', '.jpeg', '2023-07-06 14:47:26', 'superadmin', '2023-07-06 14:48:48', 'superadmin'),
+(15, 'World Superbike Indonesia', 'world-superbike-indonesia', '<p>Gelaran World Superbike Indonesia ini atau akrab dikenal dengan WSBK merupakan gelaran kedua dari total 12 race yang diagendakan WSBK dalam musim 2023 kali ini setelah sebelumnya berlangsung di Australia pada Februari 2023.</p>\r\n<p>Selain itu kejuaraan WSBK 2023 akan menjadi edisi ke-36 sejak pertama kali diadakan pada tahun 1988 silam. WSBK 2023 akan dilaksanakan di Mandalika International Street Circuit, Lombok pada 4 - 5 Maret 2023. </p>', 1, 'world-superbike-indonesia20230706145259', '.jpg', '2023-07-06 14:52:59', 'superadmin', NULL, ''),
+(16, 'Turnamen Futsal Nasional di Solo, Jaring Bakat ke Timnas Indonesia', 'turnamen-futsal-nasional-di-solo-jaring-bakat-ke-timnas-indonesia', '<p><strong>SOLO, suaramerdeka-solo.com</strong> — Turnamen <a href=\"https://solo.suaramerdeka.com/tag/nasional\">nasional</a> futsal antarpelajar SMA bakal dihelat di <a href=\"https://solo.suaramerdeka.com/tag/gor-sritex-arena-solo\">GOR Sritex Arena Solo</a>, 8-11 Desember 2022.</p>\r\n<p>Sejumlah 20 tim SMA di Kota Bengawan akan bertarung dalam ajang yang memperebutkan hadiah total ratusan juta rupiah tersebut.</p>\r\n<p>Ajang bertajuk <a href=\"https://solo.suaramerdeka.com/tag/usee-sports-futsal-cup-2022\">Usee Sports Futsal Cup 2022</a> itu merupakan lanjutan gelaran serupa di 4 kota, yakni Bandung, Semarang, Jakarta dan Surabaya.</p>\r\n<p>Tim-tim juara pada ajang serupa sebelumnya, dikabarkan turut bersaing di Solo. Yakni juara Usee Sports Futsal Merdeka SMAN 3 Cibinong, juara Usee Sports Futsal Challenge Regional Surabaya Kategori SMA, SMAN 9 Surabaya dan pemenang kualifikasi zona Jawa Tengah-DIY.</p>\r\n<p>“Kami berkomunikasi dengan stakeholder klub profesional dan Timnas Indonesia terkait pemantauan bakat. Di Solo Raya, peminat futsal sangat tinggi. Prestasinya juga cukup bagus,” kata Manajer Usee Sports, Yohanes Indra kepada pers di Solo, Selasa (6/12/2022).Pihaknya menggandeng Futsalation sebagai penyelenggara. Turnamen itu menggunakan perangkat pertandingan berlisensi, serta lapangan yang baik. Dengan demikian, suasana laga tetap terjaga.</p>\r\n<p>Ketua Umum Asosiasi Futsal Kota Solo, Argya Satya menyambut positif kembali digelarnya turnamen berskala <a href=\"https://solo.suaramerdeka.com/tag/nasional\">nasional</a> itu di Solo.</p>\r\n<p>Menurutnya, tim-tim asal Solo Raya memiliki kemampuan cukup bagus. Dicontohkan, pada Porprov Jateng 2018, tim itu cukup mendominasi.</p>\r\n<p>Dedi Suherman, EGM Divisi TV Video Telkom Indonesia menuturkan, Telkom Indonesia dan Telkom Group senantiasa mendukung olahraga di Tanah Air.</p>', 2, 'turnamen-futsal-nasional-di-solo-jaring-bakat-ke-timnas-indonesia20230706145844', '.jpg', '2023-07-06 14:57:35', 'superadmin', '2023-07-06 14:58:44', 'superadmin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `foto`
+-- Struktur dari tabel `foto`
 --
 
 CREATE TABLE `foto` (
@@ -176,24 +173,23 @@ CREATE TABLE `foto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `foto`
+-- Dumping data untuk tabel `foto`
 --
 
 INSERT INTO `foto` (`id_foto`, `album_id`, `nama_foto`, `slug_foto`, `foto`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 1, 'Testing Saja Cuis', 'testing-saja-cuis', 'testing-saja-cuis20180411025319.jpg', 'amperakoding', '2018-04-11 07:41:29', 'amperakoding', '2021-05-17 19:57:13'),
-(2, 4, 'Foto Lagi Coba', 'foto-lagi-coba', 'foto-lagi-coba20180411024503.jpg', 'amperakoding', '2018-04-11 07:45:03', 'amperakoding', '2021-05-17 19:58:17'),
-(3, 3, 'Foto Coba Lagi Saja', 'foto-coba-lagi-saja', 'foto-coba-lagi-saja20180411024712.jpg', 'amperakoding', '2018-04-11 07:47:12', 'amperakoding', '2021-05-17 19:58:17'),
-(4, 1, 'Teasdasd', 'teasdasd', 'teasdasd20180414101405.png', 'amperakoding', '2018-04-14 15:13:17', 'amperakoding', '2021-05-17 19:57:13'),
-(5, 3, 'Agains', 'agains', 'agains20180414101428.jpg', 'amperakoding', '2018-04-14 15:14:29', 'amperakoding', '2021-05-17 19:58:17'),
-(6, 4, 'Waasd', 'waasd', 'waasd20180414101515.jpg', 'amperakoding', '2018-04-14 15:15:15', 'amperakoding', '2021-05-17 19:58:17'),
-(7, 1, 'ASczxc', 'asczxc', 'asczxc20180414101545.jpg', 'amperakoding', '2018-04-14 15:15:45', 'amperakoding', '2021-05-17 19:58:17'),
-(8, 1, 'ASXzc', 'asxzc', 'asxzc20180414101604.jpg', 'amperakoding', '2018-04-14 15:16:05', 'amperakoding', '2021-05-17 19:58:17'),
-(9, 2, 'ASczxcacasc', 'asczxcacasc', 'asczxcacasc20180414101613.png', 'amperakoding', '2018-04-14 15:16:13', 'amperakoding', '2021-05-17 19:58:17');
+(9, 2, 'ASczxcacasc', 'asczxcacasc', 'asczxcacasc20180414101613.png', 'amperakoding', '2018-04-14 15:16:13', 'amperakoding', '2021-05-17 19:58:17'),
+(10, 1, 'Lapangan Futsal', 'lapangan-futsal', 'lapangan-futsal20230608224317.jpg', 'superadmin', '2023-06-08 22:43:17', '', NULL),
+(11, 1, 'Lapangan Futsal', 'lapangan-futsal', 'lapangan-futsal20230608224333.jpg', 'superadmin', '2023-06-08 22:43:33', '', NULL),
+(12, 1, 'Lapangan Futsal', 'lapangan-futsal', 'lapangan-futsal20230608224346.jpg', 'superadmin', '2023-06-08 22:43:46', '', NULL),
+(13, 1, 'Lapangan Futsal', 'lapangan-futsal', 'lapangan-futsal20230608224603.jpg', 'superadmin', '2023-06-08 22:46:03', '', NULL),
+(14, 2, 'Kolam Renang', 'kolam-renang', 'kolam-renang20230608225435.jpg', 'superadmin', '2023-06-08 22:54:35', '', NULL),
+(15, 2, 'Kolam Renang', 'kolam-renang', 'kolam-renang20230608225452.jpg', 'superadmin', '2023-06-08 22:54:52', '', NULL),
+(16, 2, 'Kolam Renang', 'kolam-renang', 'kolam-renang20230608225510.jpg', 'superadmin', '2023-06-08 22:55:10', '', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jam`
+-- Struktur dari tabel `jam`
 --
 
 CREATE TABLE `jam` (
@@ -203,7 +199,7 @@ CREATE TABLE `jam` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `jam`
+-- Dumping data untuk tabel `jam`
 --
 
 INSERT INTO `jam` (`id`, `jam`, `is_available`) VALUES
@@ -229,7 +225,7 @@ INSERT INTO `jam` (`id`, `jam`, `is_available`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -243,7 +239,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug_kat`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
@@ -253,7 +249,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug_kat`, `created_by`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kontak`
+-- Struktur dari tabel `kontak`
 --
 
 CREATE TABLE `kontak` (
@@ -267,18 +263,18 @@ CREATE TABLE `kontak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kontak`
+-- Dumping data untuk tabel `kontak`
 --
 
 INSERT INTO `kontak` (`id_kontak`, `nama_kontak`, `nohp`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Azmi', '6281228289766', 'amperakoding', '2018-07-23 11:16:57', 'amperakoding', '2021-05-17 19:59:04'),
-(2, 'Budi', '6282184082336', 'amperakoding', '2018-07-23 11:16:57', 'amperakoding', '2021-05-17 19:59:04'),
-(3, 'Joko', '62819481471', 'amperakoding', '2018-07-23 11:20:44', 'amperakoding', '2021-05-17 19:59:04');
+(1, 'Admin 1', '6281228289766', 'regora', '2018-07-23 11:16:57', 'Bendi', '2023-07-06 08:25:53'),
+(2, 'Admin 2', '6282184082336', 'regora', '2018-07-23 11:16:57', 'Bendi', '2023-07-06 08:26:18'),
+(3, 'Admin 3', '62819481471', 'regora', '2018-07-23 11:20:44', 'Bendi', '2023-07-06 08:26:26');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kota`
+-- Struktur dari tabel `kota`
 --
 
 CREATE TABLE `kota` (
@@ -288,7 +284,7 @@ CREATE TABLE `kota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kota`
+-- Dumping data untuk tabel `kota`
 --
 
 INSERT INTO `kota` (`id_kota`, `provinsi_id`, `nama_kota`) VALUES
@@ -797,7 +793,7 @@ INSERT INTO `kota` (`id_kota`, `provinsi_id`, `nama_kota`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lapangan`
+-- Struktur dari tabel `lapangan`
 --
 
 CREATE TABLE `lapangan` (
@@ -814,23 +810,21 @@ CREATE TABLE `lapangan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `lapangan`
+-- Dumping data untuk tabel `lapangan`
 --
 
 INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `deskripsi`, `fasilitas`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Lapangan Futsal', 100000, 'lapangan-futsal20230526092511.jpg', '', '', NULL, NULL, NULL, NULL),
-(3, 'Tempat Fitness', 80000, 'tempat-fitness20230526093238.jpg', '', 'bxhjujsjsbnhysbh', NULL, NULL, NULL, NULL),
-(4, 'Lapangan Bulu Tangkis', 100000, 'lapangan-bulu-tangkis20230526093155.jpg', '', '', NULL, NULL, NULL, NULL),
-(5, 'Area Bowling', 200000, 'lapangan-e20230526093101.jpg', '', '', NULL, NULL, NULL, NULL),
-(6, 'Kolam Renang', 150000, 'kolam-renang20230526093002.jpg', '', '', NULL, NULL, NULL, NULL),
-(8, 'kokook', 2599000, '', '', '', NULL, NULL, NULL, NULL),
-(9, 'Lapangan Futsal', 123, '', '', 'sdfghjklkjhgfds', 'superadmin', NULL, NULL, NULL),
-(10, 'Kolam', 123, '', '', 'qwerds', 'superadmin', NULL, NULL, NULL);
+(1, 'Lapangan Futsal', 35000, 'lapangan-futsal20230526092511.jpg', 'Lapangan Futsal termasuk salah satu fasilitas olahraga yang tersedia di Bengawan Sport Centre. Area lapangan ini dikelilingi oleh pagar besi. Fungsi dari pagar tersebut adalah untuk mencegah keluarnya bola dari lapangan. Di samping area lapangan ini sudah dilengkapi dengan kursi-kursi duduk untuk para pemain atau penonton.  Biasanya pengunjung yang bermain futsal merupakan rombongan dari suatu komunitas. Bahkan, lapangan futsal di sini kerap menjadi tempat untuk melangsungkan turnamen futsal.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
+(2, 'Kolam Renang', 150000, 'kolam-renang20230526093002.jpg', 'Fasilitas olahraga selanjutnya adalah kolam renang. Bengawan Sport Centre memiliki dua kolam dengan jenis kedalaman yang berbeda. Ada kolam untuk anak-anak yang memiliki permainan papan seluncur. Ada juga kolam untuk orang dewasa bertipe Olympic dengan kedalaman 125-250 m.  Kolam renang ini juga sering digunakan sebagai tempat untuk berlatih renang yang didampingi oleh pelatih. Bagi yang tidak membawa perlengkapan renang, tersedia tempat untuk membeli atau menyewa peralatan renang.', 'Toilet', NULL, NULL, 'superadmin', NULL),
+(3, 'Tempat Fitness', 80000, 'tempat-fitness20230608224924.jpg', '', 'Toilet', NULL, NULL, 'superadmin', NULL),
+(4, 'Lapangan Bulu Tangkis', 100000, 'lapangan-bulu-tangkis20230526093155.jpg', '', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
+(5, 'Area Bowling', 200000, 'lapangan-e20230526093101.jpg', 'Bengawan Sport Centre juga menyediakan arena bermain boling harga terjangkau. Bahkan, tempat ini satu-satunya yang menyediakan permainan Bowling di Surakarta. Sedangkan sistem permainannya yaitu satu kali bermain sebanyak 10 kali lemparan.  Fasilitas Boling di Bengawan Sport Centre cukup lengkap mulai dari papan skor, tempat duduk hingga sepatu khusus. Selain itu yang terpenting terdapat setidaknya 20 lintasan boling.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
+(9, 'Lapangan Tenis', 150000, 'lapangan-tenis20230608225117.jpg', '', 'Toilet', 'superadmin', NULL, 'superadmin', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login_attempts`
+-- Struktur dari tabel `login_attempts`
 --
 
 CREATE TABLE `login_attempts` (
@@ -840,10 +834,19 @@ CREATE TABLE `login_attempts` (
   `time` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data untuk tabel `login_attempts`
+--
+
+INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
+(20, '::1', 'alfi@gmail.com', 1688581507),
+(21, '::1', 'alfi@gmail.com', 1688644069),
+(22, '::1', 'alfi@gmail.com', 1688644084);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `page`
+-- Struktur dari tabel `page`
 --
 
 CREATE TABLE `page` (
@@ -855,7 +858,7 @@ CREATE TABLE `page` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `page`
+-- Dumping data untuk tabel `page`
 --
 
 INSERT INTO `page` (`id_page`, `judul_page`, `judul_seo`, `isi_page`, `gambar`) VALUES
@@ -868,7 +871,7 @@ INSERT INTO `page` (`id_page`, `judul_page`, `judul_seo`, `isi_page`, `gambar`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provinsi`
+-- Struktur dari tabel `provinsi`
 --
 
 CREATE TABLE `provinsi` (
@@ -877,7 +880,7 @@ CREATE TABLE `provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `provinsi`
+-- Dumping data untuk tabel `provinsi`
 --
 
 INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
@@ -919,7 +922,7 @@ INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Struktur dari tabel `slider`
 --
 
 CREATE TABLE `slider` (
@@ -938,32 +941,20 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `slider`
+-- Dumping data untuk tabel `slider`
 --
 
 INSERT INTO `slider` (`id_slider`, `no_urut`, `nama_slider`, `link`, `foto`, `foto_type`, `foto_size`, `created_at`, `created_by`, `modified_at`, `modified_by`, `uploader`) VALUES
-(1, 1, 'Slider 1', 'http://www.yahoo.com ', '120180610164516', '.jpg', 203, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding', NULL),
-(2, 2, 'Slider 2', 'http://www.google.com ', '220180610164521', '.jpg', 833, '2017-11-25 08:05:03', 'amperakoding', '2021-05-17 20:00:16', 'amperakoding', NULL),
-(3, 3, 'XXZ', 'http://www.facebook.com', '320230606122000', '.jpg', 167, '2017-11-25 08:05:03', 'amperakoding', '2023-06-06 12:20:00', 'superadmin', NULL),
-(4, 4, 'sdfghj', 'www.google.com', '420230606122238', '.jpg', 0, '2023-06-06 12:22:38', '', NULL, '', 'superadmin');
+(1, 1, 'Lapangan Futsal', 'http://localhost/regora/detail/9', '120230608154016', '.jpg', 203, '2017-11-25 08:05:03', 'Bendi', '2023-06-17 13:37:10', 'superadmin', NULL),
+(2, 2, 'kolam Renang', 'http://localhost/regora/detail/6', '220230608154051', '.jpg', 833, '2017-11-25 08:05:03', 'Ganang', '2023-06-17 13:37:15', 'superadmin', NULL),
+(3, 3, 'Lapangan Badminton', 'http://localhost/regora/detail/4', '320230608153907', '.jpg', 167, '2017-11-25 08:05:03', 'Rifky', '2023-06-17 13:37:21', 'superadmin', NULL),
+(4, 4, 'Fitnes', 'http://localhost/regora/detail/3', '420230608154114', '.jpg', 0, '2023-06-06 12:22:38', 'Villa', '2023-06-17 13:37:26', 'superadmin', 'superadmin'),
+(5, 5, 'Lapangan Tenis', '', '520230608154230', '.jpg', 0, '2023-06-08 15:42:30', 'Oci', '2023-06-17 13:37:31', '', 'superadmin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subscriber`
---
-
-CREATE TABLE `subscriber` (
-  `id_subscriber` int(11) NOT NULL,
-  `email` char(20) NOT NULL,
-  `status` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -981,7 +972,7 @@ CREATE TABLE `transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `transaksi`
+-- Dumping data untuk tabel `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `diskon`, `grand_total`, `deadline`, `catatan`, `status`, `created_date`, `created_time`) VALUES
@@ -1004,7 +995,7 @@ INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `disko
 (19, 'J-230525-0011', 1, 100000, 0, 100000, '2023-05-30 12:51:32', '', 1, '2023-05-25', '02:29:17'),
 (20, 'J-230526-0012', 5, 200000, 0, 200000, '2023-06-06 09:44:43', '', 2, '2023-05-26', '09:56:39'),
 (21, 'J-230530-0013', 1, 2599000, 0, 2599000, '2023-06-06 13:28:29', '', 1, '2023-05-30', '11:55:32'),
-(22, 'J-230606-0001', 5, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-06', '08:44:50'),
+(22, 'J-230606-0001', 5, 200000, 0, 200000, '2023-06-17 13:56:56', '', 1, '2023-06-06', '08:44:50'),
 (23, 'J-230606-0002', 1, 200000, 0, 200000, '2023-06-06 14:37:52', '', 1, '2023-06-06', '12:30:07'),
 (24, 'J-230606-0003', 1, 300000, 0, 300000, '2023-06-06 15:37:18', '', 1, '2023-06-06', '01:38:18'),
 (25, 'J-230606-0004', 1, 200000, 0, 200000, '2023-06-06 15:37:36', '', 1, '2023-06-06', '02:37:25'),
@@ -1035,12 +1026,31 @@ INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `disko
 (50, 'J-230608-0029', 1, 200000, 0, 200000, '2023-06-08 15:29:54', '', 1, '2023-06-08', '02:29:48'),
 (51, 'J-230608-0030', 1, 2599000, 0, 2599000, '2023-06-08 15:33:45', '', 1, '2023-06-08', '02:33:37'),
 (52, 'J-230608-0031', 1, 150000, 0, 150000, '2023-06-08 15:34:15', '', 1, '2023-06-08', '02:33:53'),
-(53, 'J-230608-0032', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-08', '02:35:24');
+(53, 'J-230608-0032', 1, 200000, 0, 200000, '2023-06-08 15:50:34', '', 1, '2023-06-08', '02:35:24'),
+(54, 'J-230608-0033', 1, 400000, 0, 400000, '2023-06-08 15:53:32', '', 1, '2023-06-08', '02:52:47'),
+(55, 'J-230608-0034', 1, 100000, 0, 100000, '2023-06-08 15:53:45', '', 1, '2023-06-08', '02:53:38'),
+(56, 'J-230608-0035', 1, 200000, 0, 200000, '2023-06-08 16:04:39', '', 1, '2023-06-08', '03:01:14'),
+(57, 'J-230608-0036', 1, 0, 0, 0, '2023-06-16 14:12:46', '', 1, '2023-06-08', '03:44:28'),
+(58, 'J-230616-0037', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-16', '01:13:18'),
+(59, 'J-230617-0038', 7, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-17', '12:41:50'),
+(60, 'J-230617-0039', 6, 200000, 30000, 170000, '2023-06-17 14:02:01', '', 1, '2023-06-17', '01:01:32'),
+(61, 'J-230617-0040', 6, 200000, 30000, 170000, '2023-06-17 14:05:17', '', 1, '2023-06-17', '01:04:21'),
+(62, 'J-230617-0041', 6, 200000, 30000, 170000, '2023-06-17 14:09:13', '', 1, '2023-06-17', '01:08:58'),
+(63, 'J-230619-0042', 6, 200000, 30000, 170000, '2023-06-19 10:32:55', '', 1, '2023-06-19', '09:30:04'),
+(64, 'J-230619-0043', 6, 150000, 30000, 120000, '2023-06-19 10:33:11', '', 1, '2023-06-19', '09:33:04'),
+(65, 'J-230619-0044', 6, 150000, 30000, 120000, '2023-06-19 11:18:14', '', 1, '2023-06-19', '10:18:06'),
+(66, 'J-230619-0045', 5, 200000, 0, 200000, '2023-06-19 12:09:58', '', 1, '2023-06-19', '11:09:44'),
+(67, 'J-230627-0046', 5, 750000, 0, 750000, '2023-06-27 13:25:41', '', 1, '2023-06-27', '12:25:18'),
+(68, 'J-230627-0047', 5, 600000, 0, 600000, '2023-06-27 13:27:13', '', 1, '2023-06-27', '12:25:57'),
+(69, 'J-230706-0001', 5, 150000, 0, 150000, '2023-07-06 02:25:41', '', 1, '2023-07-06', '01:25:29'),
+(70, 'J-230706-0002', 5, 150000, 0, 150000, '2023-07-06 02:32:26', '', 1, '2023-07-06', '01:28:27'),
+(71, 'J-230706-0003', 5, 250000, 0, 250000, '2023-07-06 19:47:03', '', 1, '2023-07-06', '08:46:43'),
+(72, 'J-230706-0004', 6, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-07-06', '06:48:36');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi_detail`
+-- Struktur dari tabel `transaksi_detail`
 --
 
 CREATE TABLE `transaksi_detail` (
@@ -1057,14 +1067,14 @@ CREATE TABLE `transaksi_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `transaksi_detail`
+-- Dumping data untuk tabel `transaksi_detail`
 --
 
 INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tanggal`, `jam_mulai`, `durasi`, `jam_selesai`, `harga_jual`, `total`, `created_at`) VALUES
 (4, 3, 4, '2021-05-16', '13:00:00', 3, '16:00:00', 100000, 300000, '2021-05-16 20:20:09'),
 (5, 4, 1, '2021-04-09', '22:00:00', 1, '23:00:00', 100000, 100000, '2021-04-08 20:21:35'),
 (7, 4, 3, '2021-04-13', '21:00:00', 1, '22:00:00', 80000, 80000, '2021-04-08 20:21:36'),
-(8, 5, 6, '2021-04-08', '10:00:00', 1, '11:00:00', 150000, 150000, '2021-04-08 20:22:29'),
+(8, 5, 2, '2021-04-08', '10:00:00', 1, '11:00:00', 150000, 150000, '2021-04-08 20:22:29'),
 (14, 10, 5, '2023-05-31', '24:00:00', 17, '41:00:00', 200000, 3400000, '2023-05-23 09:01:41'),
 (16, 12, 1, '2023-05-23', '06:00:00', 7, '13:00:00', 100000, 700000, '2023-05-23 11:32:48'),
 (17, 13, 1, '2023-05-23', '17:00:00', 1, '18:00:00', 100000, 100000, '2023-05-23 11:34:05'),
@@ -1075,8 +1085,6 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 (27, 18, 1, '2023-05-26', '06:00:00', 2, '08:00:00', 100000, 200000, '2023-05-25 14:11:53'),
 (31, 20, 5, '2023-06-06', '18:00:00', 1, '19:00:00', 200000, 200000, '2023-05-26 09:56:39'),
 (33, 19, 4, '2023-05-30', '07:00:00', 1, '08:00:00', 100000, 100000, '2023-05-30 11:49:01'),
-(36, 22, 8, '0000-00-00', NULL, 0, NULL, 2599000, 2599000, '2023-06-06 08:51:17'),
-(37, 21, 8, '2023-06-06', '22:00:00', 1, '23:00:00', 2599000, 2599000, '2023-06-06 12:23:27'),
 (38, 23, 5, '2023-06-13', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-06 12:30:07'),
 (41, 24, 5, '2023-06-20', '23:00:00', 1, '24:00:00', 200000, 200000, '2023-06-06 14:35:48'),
 (42, 24, 1, '2023-06-06', '18:00:00', 1, '19:00:00', 100000, 100000, '2023-06-06 14:36:57'),
@@ -1106,13 +1114,36 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 (68, 48, 5, '2023-06-28', '18:00:00', 1, '19:00:00', 200000, 200000, '2023-06-08 14:26:29'),
 (69, 49, 5, '2023-06-28', '17:00:00', 1, '18:00:00', 200000, 200000, '2023-06-08 14:28:56'),
 (70, 50, 5, '2023-06-29', '24:00:00', 1, '25:00:00', 200000, 200000, '2023-06-08 14:29:48'),
-(71, 51, 8, '2023-06-28', '24:00:00', 1, '25:00:00', 2599000, 2599000, '2023-06-08 14:33:37'),
-(73, 52, 6, '2023-06-28', '23:00:00', 1, '24:00:00', 150000, 150000, '2023-06-08 14:34:02');
+(73, 52, 2, '2023-06-28', '23:00:00', 1, '24:00:00', 150000, 150000, '2023-06-08 14:34:02'),
+(76, 53, 5, '2023-06-21', '23:00:00', 1, '24:00:00', 200000, 200000, '2023-06-08 14:49:53'),
+(77, 54, 5, '2023-06-29', '22:00:00', 2, '24:00:00', 200000, 400000, '2023-06-08 14:52:47'),
+(78, 55, 4, '2023-06-29', '24:00:00', 1, '25:00:00', 100000, 100000, '2023-06-08 14:53:38'),
+(79, 56, 5, '2023-06-29', '20:00:00', 1, '21:00:00', 200000, 200000, '2023-06-08 15:01:14'),
+(85, 57, 2, '2023-06-28', '24:00:00', 1, '25:00:00', 150000, 0, '2023-06-16 13:07:39'),
+(91, 58, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-06-16 13:44:53'),
+(92, 59, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-06-17 12:41:50'),
+(93, 22, 5, '2023-06-27', '12:00:00', 1, '13:00:00', 200000, 200000, '2023-06-17 12:55:20'),
+(94, 60, 5, '2023-06-28', '12:00:00', 1, '13:00:00', 200000, 200000, '2023-06-17 13:01:32'),
+(95, 61, 5, '2023-06-26', '24:00:00', 1, '25:00:00', 200000, 200000, '2023-06-17 13:04:21'),
+(96, 62, 5, '2023-06-26', '23:00:00', 1, '24:00:00', 200000, 200000, '2023-06-17 13:08:58'),
+(97, 63, 5, '2023-06-20', '14:00:00', 1, '15:00:00', 200000, 200000, '2023-06-19 09:30:04'),
+(98, 64, 2, '2023-06-29', '24:00:00', 1, '25:00:00', 150000, 150000, '2023-06-19 09:33:04'),
+(99, 65, 2, '2023-06-28', '22:00:00', 1, '23:00:00', 150000, 150000, '2023-06-19 10:18:06'),
+(100, 66, 5, '2023-06-29', '19:00:00', 1, '20:00:00', 200000, 200000, '2023-06-19 11:09:44'),
+(101, 67, 9, '2023-06-27', '07:00:00', 5, '12:00:00', 150000, 750000, '2023-06-27 12:25:18'),
+(102, 68, 9, '2023-06-27', '15:00:00', 4, '19:00:00', 150000, 600000, '2023-06-27 12:25:57'),
+(103, 69, 2, '2023-07-06', '14:00:00', 1, '15:00:00', 150000, 150000, '2023-07-06 01:25:29'),
+(104, 70, 2, '2023-07-25', '10:00:00', 1, '11:00:00', 150000, 150000, '2023-07-06 01:28:27'),
+(105, 71, 2, '2023-07-26', '23:00:00', 1, '24:00:00', 150000, 150000, '2023-07-06 08:46:43'),
+(107, 71, 4, '2023-07-27', '11:00:00', 1, '12:00:00', 100000, 100000, '2023-07-06 08:46:52'),
+(108, 58, 1, '0000-00-00', NULL, 0, NULL, 35000, 35000, '2023-07-06 15:42:56'),
+(109, 58, 2, '0000-00-00', NULL, 0, NULL, 150000, 150000, '2023-07-06 16:32:30'),
+(110, 72, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-07-06 18:48:36');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -1141,22 +1172,22 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `phone`, `provinsi`, `kota`, `address`, `usertype`, `active`, `photo`, `photo_type`, `ip_address`, `salt`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `last_login`, `created_on`, `modified`) VALUES
-(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1686197512, 2147483647, '2023-06-08 11:11:52'),
+(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1688623588, 2147483647, '2023-07-06 13:06:28'),
 (2, 'Admin', 'administrator', '$2y$08$rnCngWyQhFLdVJijctNDKuwJZ8o9VfcSsZ9IM9XN71ugxIpQFeCWe', 'administrator@gmail.com', '08124124', NULL, NULL, 'kaldjlas', 2, 1, 'admin20180424102408', '.jpeg', '::1', NULL, NULL, NULL, NULL, NULL, 1685067356, 1524551716, '2023-05-26 09:15:56'),
-(3, 'Batistuta', 'batistuta', '$2y$08$.5EYrM8S8Up0LcpFiEmjauyPVdWOmylLZ.MqM0zBKyDVKniwdVbYi', 'batistuta@gmail.com', '0812412414', 33, 327, 'Jl. Skdlajsdlasjkdl', 4, 1, NULL, NULL, '127.0.0.1', NULL, NULL, NULL, NULL, NULL, 1621257779, 1528634033, '2021-05-17 20:22:59'),
+(3, 'Batistuta', 'batistuta', '12345678', 'batistuta@gmail.com', '0812412414', 33, 327, 'Jl. Skdlajsdlasjkdl', 4, 1, NULL, NULL, '127.0.0.1', NULL, NULL, NULL, NULL, NULL, 1621257779, 1528634033, '2023-06-17 12:40:04'),
 (4, 'User Premium', 'userpremium', '12345678', 'userpremium@gmail.com', '0812412412', 3, 106, 'kaljdklasjdkl', 3, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1621252638, 1531807819, '2023-05-23 08:59:41'),
-(5, 'bendi', 'bendi', '$2y$08$LCIkv2uYUsJ8ztM36ZiQm.phYthRn1EE0KA17ll9.57haAgB2AmGK', 'bendi@gmail.com', '0987654', 16, 96, 'asdfrtghjknbv', 4, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1686014754, 1684807247, '2023-06-06 08:25:54'),
-(6, 'rifky', 'rifky', '$2y$08$bSCPS8yOSpc4QX8EIRLbL.bFXuxqOo9TemabJhv.09D0n4s6NPr3K', 'rifky@gmail.com', '0987654', 15, 19, 'ghjk', 4, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1684815821, 1684815552, '2023-05-23 11:23:41'),
-(7, 'alfi', 'alfi', '$2y$08$ZjsmUaq9tpAysDrEkevqFOEQnZse4ATFcTNN9FVdeNQPk1XWygmTW', 'alfi@gmail.com', '0987654', NULL, NULL, 'ertyujhgf', 3, 1, 'alfi20230523120211', '.png', '::1', NULL, NULL, NULL, NULL, NULL, 1685070250, 1684818131, '2023-05-26 10:04:10');
+(5, 'bendi', 'bendi', '$2y$08$LCIkv2uYUsJ8ztM36ZiQm.phYthRn1EE0KA17ll9.57haAgB2AmGK', 'bendi@gmail.com', '0987654', 16, 96, 'asdfrtghjknbv', 4, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1688643998, 1684807247, '2023-07-06 18:46:38'),
+(6, 'rifky', 'rifky', '$2y$08$bSCPS8yOSpc4QX8EIRLbL.bFXuxqOo9TemabJhv.09D0n4s6NPr3K', 'rifky@gmail.com', '0987654', 15, 19, 'ghjk', 3, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1688644106, 1684815552, '2023-07-06 18:48:26'),
+(7, 'alfi', 'alfi', '$2y$08$ZjsmUaq9tpAysDrEkevqFOEQnZse4ATFcTNN9FVdeNQPk1XWygmTW', 'alfi@gmail.com', '0987654', NULL, NULL, 'ertyujhgf', 5, 1, 'alfi20230523120211', '.png', '::1', NULL, NULL, NULL, NULL, NULL, 1686980501, 1684818131, '2023-06-17 12:59:27');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_group`
+-- Struktur dari tabel `users_group`
 --
 
 CREATE TABLE `users_group` (
@@ -1165,113 +1196,108 @@ CREATE TABLE `users_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `users_group`
+-- Dumping data untuk tabel `users_group`
 --
 
 INSERT INTO `users_group` (`id_group`, `name_group`) VALUES
 (1, 'SuperAdmin'),
 (2, 'Administrator'),
 (3, 'Member Premium'),
-(4, 'Member Biasa');
+(4, 'Member Biasa'),
+(5, 'Member Diskon');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `album`
+-- Indeks untuk tabel `album`
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`id_album`);
 
 --
--- Indexes for table `bank`
+-- Indeks untuk tabel `bank`
 --
 ALTER TABLE `bank`
   ADD PRIMARY KEY (`id_bank`);
 
 --
--- Indexes for table `company`
+-- Indeks untuk tabel `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id_company`);
 
 --
--- Indexes for table `diskon`
+-- Indeks untuk tabel `diskon`
 --
 ALTER TABLE `diskon`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `event`
+-- Indeks untuk tabel `event`
 --
 ALTER TABLE `event`
   ADD PRIMARY KEY (`id_event`);
 
 --
--- Indexes for table `foto`
+-- Indeks untuk tabel `foto`
 --
 ALTER TABLE `foto`
   ADD PRIMARY KEY (`id_foto`),
   ADD KEY `foto_FK` (`album_id`);
 
 --
--- Indexes for table `jam`
+-- Indeks untuk tabel `jam`
 --
 ALTER TABLE `jam`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `kontak`
+-- Indeks untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
   ADD PRIMARY KEY (`id_kontak`);
 
 --
--- Indexes for table `lapangan`
+-- Indeks untuk tabel `lapangan`
 --
 ALTER TABLE `lapangan`
   ADD PRIMARY KEY (`id_lapangan`);
 
 --
--- Indexes for table `login_attempts`
+-- Indeks untuk tabel `login_attempts`
 --
 ALTER TABLE `login_attempts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `page`
+-- Indeks untuk tabel `page`
 --
 ALTER TABLE `page`
   ADD PRIMARY KEY (`id_page`);
 
 --
--- Indexes for table `slider`
+-- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id_slider`);
 
 --
--- Indexes for table `subscriber`
---
-ALTER TABLE `subscriber`
-  ADD PRIMARY KEY (`id_subscriber`);
-
---
--- Indexes for table `transaksi`
+-- Indeks untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_trans`),
   ADD KEY `transaksi_FK` (`user_id`);
 
 --
--- Indexes for table `transaksi_detail`
+-- Indeks untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
   ADD PRIMARY KEY (`id_transdet`),
@@ -1279,141 +1305,135 @@ ALTER TABLE `transaksi_detail`
   ADD KEY `transaksi_detail_FK_1` (`trans_id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users_group`
+-- Indeks untuk tabel `users_group`
 --
 ALTER TABLE `users_group`
   ADD PRIMARY KEY (`id_group`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `album`
+-- AUTO_INCREMENT untuk tabel `album`
 --
 ALTER TABLE `album`
   MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `bank`
+-- AUTO_INCREMENT untuk tabel `bank`
 --
 ALTER TABLE `bank`
   MODIFY `id_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `company`
+-- AUTO_INCREMENT untuk tabel `company`
 --
 ALTER TABLE `company`
   MODIFY `id_company` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `event`
+-- AUTO_INCREMENT untuk tabel `event`
 --
 ALTER TABLE `event`
-  MODIFY `id_event` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_event` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `foto`
+-- AUTO_INCREMENT untuk tabel `foto`
 --
 ALTER TABLE `foto`
-  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `jam`
+-- AUTO_INCREMENT untuk tabel `jam`
 --
 ALTER TABLE `jam`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `kontak`
+-- AUTO_INCREMENT untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
   MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `lapangan`
+-- AUTO_INCREMENT untuk tabel `lapangan`
 --
 ALTER TABLE `lapangan`
   MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `login_attempts`
+-- AUTO_INCREMENT untuk tabel `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `page`
+-- AUTO_INCREMENT untuk tabel `page`
 --
 ALTER TABLE `page`
   MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT untuk tabel `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `subscriber`
---
-ALTER TABLE `subscriber`
-  MODIFY `id_subscriber` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `transaksi`
+-- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
--- AUTO_INCREMENT for table `transaksi_detail`
+-- AUTO_INCREMENT untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
-  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `users_group`
+-- AUTO_INCREMENT untuk tabel `users_group`
 --
 ALTER TABLE `users_group`
-  MODIFY `id_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `foto`
+-- Ketidakleluasaan untuk tabel `foto`
 --
 ALTER TABLE `foto`
   ADD CONSTRAINT `foto_FK` FOREIGN KEY (`album_id`) REFERENCES `album` (`id_album`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transaksi`
+-- Ketidakleluasaan untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transaksi_detail`
+-- Ketidakleluasaan untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
   ADD CONSTRAINT `transaksi_detail_FK` FOREIGN KEY (`lapangan_id`) REFERENCES `lapangan` (`id_lapangan`) ON DELETE CASCADE ON UPDATE CASCADE,
