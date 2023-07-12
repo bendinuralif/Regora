@@ -24,9 +24,9 @@
         <li class="<?php if($this->uri->segment(1) == "event"){echo "active";} ?>">
           <a href="<?php echo base_url('event') ?>"> Event</a>
         </li>
-        <!-- <li class="<?php if($this->uri->segment(1) == "gallery"){echo "active";} ?>">
+        <li class="<?php if($this->uri->segment(1) == "gallery"){echo "active";} ?>">
           <a href="<?php echo base_url('gallery/album') ?>"> Foto</a>
-        </li> -->
+        </li>
         <li class="dropdown <?php if($this->uri->segment(1) == "about" or $this->uri->segment(1) == "contact"){echo "active";} ?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
           <ul class="dropdown-menu">
