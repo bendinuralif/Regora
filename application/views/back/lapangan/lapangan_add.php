@@ -35,6 +35,9 @@
                   <div class="form-group"><label>Deskripsi</label>
                     <?php echo form_input($deskripsi);?>
                   </div>
+                  <div class="form-group"><label>Keterangan</label>
+                    <?php echo form_input($keterangan);?>
+                  </div>
                   <div class="form-group"><label>Foto</label>
                     <input type="file" class="form-control" name="foto" id="foto" onchange="tampilkanPreview(this,'preview')"/>
                     <br><p><b>Preview Foto</b><br>

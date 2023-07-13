@@ -60,7 +60,14 @@ class Lapangan extends CI_Controller
       'value' => $this->form_validation->set_value('deskripsi'),
       'required'    => '',
     );
-
+    $this->data['keterangan'] = array(
+      'name'  => 'keterangan',
+      'id'    => 'keterangan',
+      'type'  => 'text',
+      'class' => 'form-control',
+      'value' => $this->form_validation->set_value('keterangan'),
+      'required'    => '',
+    );
 
     $this->load->view('back/lapangan/lapangan_add', $this->data);
   }
@@ -120,6 +127,7 @@ class Lapangan extends CI_Controller
               'deskripsi'   => $this->input->post('deskripsi'),
               'harga'           => $this->input->post('harga'),
               'fasilitas'       => $this->input->post('fasilitas'),
+              'keterangan'       => $this->input->post('keterangan'),
               'foto'            => $nmfile.$foto['file_ext'],
               'created_by'      => $this->session->userdata('username')
             );
@@ -141,6 +149,7 @@ class Lapangan extends CI_Controller
           'deskripsi'   => $this->input->post('deskripsi'),
           'harga'           => $this->input->post('harga'),
           'fasilitas'       => $this->input->post('fasilitas'),
+          'keterangan'       => $this->input->post('keterangan'),
           'created_by'      => $this->session->userdata('username')
         );
 
@@ -197,6 +206,13 @@ class Lapangan extends CI_Controller
       $this->data['deskripsi'] = array(
         'name'  => 'deskripsi',
         'id'    => 'deskripsi',
+        'type'  => 'text',
+        'class' => 'form-control',
+        'required'    => '',
+      );
+      $this->data['keterangan'] = array(
+        'name'  => 'keterangan',
+        'id'    => 'keterangan',
         'type'  => 'text',
         'class' => 'form-control',
         'required'    => '',
@@ -280,6 +296,7 @@ class Lapangan extends CI_Controller
                 'deskripsi'   => $this->input->post('deskripsi'),
                 'harga'           => $this->input->post('harga'),
                 'fasilitas'       => $this->input->post('fasilitas'),
+                'keterangan'       => $this->input->post('keterangan'),
                 'foto'            => $nmfile.$foto['file_ext'],
                 'modified_by'     => $this->session->userdata('username')
               );
@@ -300,6 +317,7 @@ class Lapangan extends CI_Controller
               'deskripsi'   => $this->input->post('deskripsi'),
               'harga'           => $this->input->post('harga'),
               'fasilitas'       => $this->input->post('fasilitas'),
+              'keterangan'       => $this->input->post('keterangan'),
               'modified_by'     => $this->session->userdata('username')
             );
 

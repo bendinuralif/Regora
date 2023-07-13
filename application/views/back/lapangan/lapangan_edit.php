@@ -30,10 +30,13 @@
                     <?php echo form_input($harga, $lapangan->harga);?>
                   </div>
                   <div class="form-group"><label>Fasilitas</label>
-                    <?php echo form_input($fasilitas);?>
+                    <?php echo form_input($fasilitas, $lapangan->fasilitas);?>
                   </div>
                   <div class="form-group"><label>Deskripsi</label>
-                    <?php echo form_input($deskripsi);?>
+                    <?php echo form_input($deskripsi, $lapangan->deskripsi);?>
+                  </div>
+                  <div class="form-group"><label>Keterangan</label>
+                    <?php echo form_input($keterangan, $lapangan->keterangan);?>
                   </div>
                   <div class="form-group"><label>Foto Sebelumnya</label><br>
                     <img src="<?php echo base_url('assets/images/lapangan/'.$lapangan->foto.'') ?>" width="300px" class="img-responsive"/>
