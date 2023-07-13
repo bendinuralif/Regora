@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.3.0-dev+20221120.420485a41b
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2023 at 05:25 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.5
+-- Waktu pembuatan: 13 Jul 2023 pada 09.47
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `futsal`
+-- Database: `regora_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `album`
+-- Struktur dari tabel `album`
 --
 
 CREATE TABLE `album` (
@@ -36,10 +36,10 @@ CREATE TABLE `album` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(20) DEFAULT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `album`
+-- Dumping data untuk tabel `album`
 --
 
 INSERT INTO `album` (`id_album`, `nama_album`, `slug_album`, `foto`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
@@ -53,7 +53,7 @@ INSERT INTO `album` (`id_album`, `nama_album`, `slug_album`, `foto`, `created_by
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bank`
+-- Struktur dari tabel `bank`
 --
 
 CREATE TABLE `bank` (
@@ -62,10 +62,10 @@ CREATE TABLE `bank` (
   `atas_nama` varchar(100) NOT NULL,
   `norek` varchar(100) NOT NULL,
   `logo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `bank`
+-- Dumping data untuk tabel `bank`
 --
 
 INSERT INTO `bank` (`id_bank`, `nama_bank`, `atas_nama`, `norek`, `logo`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `bank` (`id_bank`, `nama_bank`, `atas_nama`, `norek`, `logo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `company`
+-- Struktur dari tabel `company`
 --
 
 CREATE TABLE `company` (
@@ -96,28 +96,28 @@ CREATE TABLE `company` (
   `modified` datetime DEFAULT NULL,
   `created_by` char(50) NOT NULL,
   `modified_by` char(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `company`
+-- Dumping data untuk tabel `company`
 --
 
 INSERT INTO `company` (`id_company`, `company_name`, `company_desc`, `company_address`, `company_maps`, `company_phone`, `company_phone2`, `company_fax`, `company_email`, `foto`, `foto_type`, `created`, `modified`, `created_by`, `modified_by`) VALUES
-(1, 'REGORA', 'REGORA didirikan pada tahun 2010 oleh sekelompok individu dengan minat dalam olahraga dan teknologi informasi. Perusahaan ini fokus pada pengembangan sistem aplikasi penyewaan tempat olahraga secara online. Setelah melakukan riset dan pengujian, REGORA meluncurkan platform aplikasi yang mudah digunakan.\nPerkembangan REGORA menarik minat banyak tempat olahraga terkemuka, membentuk kemitraan untuk meningkatkan pelayanan dan efisiensi operasional. Seiring waktu, REGORA terus berinovasi dalam industri aplikasi penyewaan tempat olahraga, memperluas jaringan mitra, dan meningkatkan fitur aplikasi.\nDengan dedikasi terhadap inovasi, REGORA telah menjadi pemain utama dalam industri ini, memberikan kemudahan akses dan efisiensi dalam menyewa tempat olahraga. Mereka terus berupaya memberikan pengalaman terbaik bagi pengguna dan mendorong pertumbuhan industri olahraga secara keseluruhan.', 'Jl. Maju Mundur Kec. Camat Kel. Lurahan, Kab. , Dunia Lain', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16327777.649419477!2d108.84621849858628!3d-2.415291213289622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1506312173230\" width=\"100%\" height=\"200\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '081241412', '0711412402', '12414', 'regora@gmail.com', 'company-profile20180414070824', '.PNG', '2017-11-09 06:45:34', NULL, 'amperakoding', 'amperakoding');
+(1, 'REGORA', 'REGORA didirikan pada tahun 2010 oleh sekelompok individu dengan minat dalam olahraga dan teknologi informasi. Perusahaan ini fokus pada pengembangan sistem aplikasi penyewaan tempat olahraga secara online. Setelah melakukan riset dan pengujian, REGORA meluncurkan platform aplikasi yang mudah digunakan.\nPerkembangan REGORA menarik minat banyak tempat olahraga terkemuka, membentuk kemitraan untuk meningkatkan pelayanan dan efisiensi operasional. Seiring waktu, REGORA terus berinovasi dalam industri aplikasi penyewaan tempat olahraga, memperluas jaringan mitra, dan meningkatkan fitur aplikasi.\nDengan dedikasi terhadap inovasi, REGORA telah menjadi pemain utama dalam industri ini, memberikan kemudahan akses dan efisiensi dalam menyewa tempat olahraga. Mereka terus berupaya memberikan pengalaman terbaik bagi pengguna dan mendorong pertumbuhan industri olahraga secara keseluruhan.', 'Jl. HOS Cokroaminoto No.55, Pucangsawit, Kec. Jebres, Kota Surakarta, Jawa Tengah 57126', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16327777.649419477!2d108.84621849858628!3d-2.415291213289622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c4c07d7496404b7%3A0xe37b4de71badf485!2sIndonesia!5e0!3m2!1sen!2sid!4v1506312173230\" width=\"100%\" height=\"200\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', '081241412', '0711412402', '12414', 'regora@gmail.com', 'company-profile20180414070824', '.PNG', '2017-11-09 06:45:34', NULL, 'amperakoding', 'amperakoding');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diskon`
+-- Struktur dari tabel `diskon`
 --
 
 CREATE TABLE `diskon` (
   `id` int(11) NOT NULL,
   `harga` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `diskon`
+-- Dumping data untuk tabel `diskon`
 --
 
 INSERT INTO `diskon` (`id`, `harga`) VALUES
@@ -126,7 +126,7 @@ INSERT INTO `diskon` (`id`, `harga`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event`
+-- Struktur dari tabel `event`
 --
 
 CREATE TABLE `event` (
@@ -141,10 +141,10 @@ CREATE TABLE `event` (
   `created_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `modified_by` char(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `event`
+-- Dumping data untuk tabel `event`
 --
 
 INSERT INTO `event` (`id_event`, `nama_event`, `slug_event`, `deskripsi`, `kategori`, `foto`, `foto_type`, `created_at`, `created_by`, `modified_at`, `modified_by`) VALUES
@@ -156,7 +156,7 @@ INSERT INTO `event` (`id_event`, `nama_event`, `slug_event`, `deskripsi`, `kateg
 -- --------------------------------------------------------
 
 --
--- Table structure for table `foto`
+-- Struktur dari tabel `foto`
 --
 
 CREATE TABLE `foto` (
@@ -169,10 +169,10 @@ CREATE TABLE `foto` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(20) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `foto`
+-- Dumping data untuk tabel `foto`
 --
 
 INSERT INTO `foto` (`id_foto`, `album_id`, `nama_foto`, `slug_foto`, `foto`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
@@ -196,17 +196,17 @@ INSERT INTO `foto` (`id_foto`, `album_id`, `nama_foto`, `slug_foto`, `foto`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jam`
+-- Struktur dari tabel `jam`
 --
 
 CREATE TABLE `jam` (
   `id` int(11) NOT NULL,
   `jam` varchar(50) NOT NULL,
   `is_available` tinyint(4) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `jam`
+-- Dumping data untuk tabel `jam`
 --
 
 INSERT INTO `jam` (`id`, `jam`, `is_available`) VALUES
@@ -232,7 +232,7 @@ INSERT INTO `jam` (`id`, `jam`, `is_available`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -243,10 +243,10 @@ CREATE TABLE `kategori` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug_kat`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
@@ -256,7 +256,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `slug_kat`, `created_by`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kontak`
+-- Struktur dari tabel `kontak`
 --
 
 CREATE TABLE `kontak` (
@@ -267,31 +267,31 @@ CREATE TABLE `kontak` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `modified_by` char(50) NOT NULL,
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kontak`
+-- Dumping data untuk tabel `kontak`
 --
 
 INSERT INTO `kontak` (`id_kontak`, `nama_kontak`, `nohp`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Admin 1', '6281228289766', 'regora', '2018-07-23 11:16:57', 'Bendi', '2023-07-06 08:25:53'),
+(1, 'Admin 1', '6285783160308', 'regora', '2018-07-23 11:16:57', 'Bendi', '2023-07-13 13:44:13'),
 (2, 'Admin 2', '6282184082336', 'regora', '2018-07-23 11:16:57', 'Bendi', '2023-07-06 08:26:18'),
 (3, 'Admin 3', '62819481471', 'regora', '2018-07-23 11:20:44', 'Bendi', '2023-07-06 08:26:26');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kota`
+-- Struktur dari tabel `kota`
 --
 
 CREATE TABLE `kota` (
   `id_kota` int(11) NOT NULL,
   `provinsi_id` int(11) NOT NULL,
   `nama_kota` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `kota`
+-- Dumping data untuk tabel `kota`
 --
 
 INSERT INTO `kota` (`id_kota`, `provinsi_id`, `nama_kota`) VALUES
@@ -800,7 +800,7 @@ INSERT INTO `kota` (`id_kota`, `provinsi_id`, `nama_kota`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lapangan`
+-- Struktur dari tabel `lapangan`
 --
 
 CREATE TABLE `lapangan` (
@@ -813,47 +813,46 @@ CREATE TABLE `lapangan` (
   `created_by` varchar(255) DEFAULT NULL,
   `created_at` varchar(255) DEFAULT NULL,
   `modified_by` varchar(255) DEFAULT NULL,
-  `modified_at` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `modified_at` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `lapangan`
+-- Dumping data untuk tabel `lapangan`
 --
 
-INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `deskripsi`, `fasilitas`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Lapangan Futsal', 35000, 'lapangan-futsal20230526092511.jpg', 'Lapangan Futsal termasuk salah satu fasilitas olahraga yang tersedia di Bengawan Sport Centre. Area lapangan ini dikelilingi oleh pagar besi. Fungsi dari pagar tersebut adalah untuk mencegah keluarnya bola dari lapangan. Di samping area lapangan ini sudah dilengkapi dengan kursi-kursi duduk untuk para pemain atau penonton.  Biasanya pengunjung yang bermain futsal merupakan rombongan dari suatu komunitas. Bahkan, lapangan futsal di sini kerap menjadi tempat untuk melangsungkan turnamen futsal.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
-(2, 'Kolam Renang', 150000, 'kolam-renang20230526093002.jpg', 'Fasilitas olahraga selanjutnya adalah kolam renang. Bengawan Sport Centre memiliki dua kolam dengan jenis kedalaman yang berbeda. Ada kolam untuk anak-anak yang memiliki permainan papan seluncur. Ada juga kolam untuk orang dewasa bertipe Olympic dengan kedalaman 125-250 m.  Kolam renang ini juga sering digunakan sebagai tempat untuk berlatih renang yang didampingi oleh pelatih. Bagi yang tidak membawa perlengkapan renang, tersedia tempat untuk membeli atau menyewa peralatan renang.', 'Toilet', NULL, NULL, 'superadmin', NULL),
-(3, 'Tempat Fitness', 80000, 'tempat-fitness20230608224924.jpg', '', 'Toilet', NULL, NULL, 'superadmin', NULL),
-(4, 'Lapangan Bulu Tangkis', 100000, 'lapangan-bulu-tangkis20230526093155.jpg', '', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
-(5, 'Area Bowling', 200000, 'lapangan-e20230526093101.jpg', 'Bengawan Sport Centre juga menyediakan arena bermain boling harga terjangkau. Bahkan, tempat ini satu-satunya yang menyediakan permainan Bowling di Surakarta. Sedangkan sistem permainannya yaitu satu kali bermain sebanyak 10 kali lemparan.  Fasilitas Boling di Bengawan Sport Centre cukup lengkap mulai dari papan skor, tempat duduk hingga sepatu khusus. Selain itu yang terpenting terdapat setidaknya 20 lintasan boling.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
-(9, 'Lapangan Tenis', 150000, 'lapangan-tenis.jpg', '', 'Toilet', 'superadmin', NULL, 'superadmin', NULL);
+INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `deskripsi`, `fasilitas`, `created_by`, `created_at`, `modified_by`, `modified_at`, `keterangan`) VALUES
+(1, 'Lapangan Futsal', 35000, 'lapangan-futsal20230526092511.jpg', 'Lapangan Futsal termasuk salah satu fasilitas olahraga yang tersedia di Bengawan Sport Centre. Area lapangan ini dikelilingi oleh pagar besi. Fungsi dari pagar tersebut adalah untuk mencegah keluarnya bola dari lapangan. Di samping area lapangan ini sudah dilengkapi dengan kursi-kursi duduk untuk para pemain atau penonton.  Biasanya pengunjung yang bermain futsal merupakan rombongan dari suatu komunitas. Bahkan, lapangan futsal di sini kerap menjadi tempat untuk melangsungkan turnamen futsal.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL, ''),
+(2, 'Kolam Renang', 12000, 'kolam-renang20230526093002.jpg', 'Fasilitas olahraga selanjutnya adalah kolam renang. Bengawan Sport Centre memiliki dua kolam dengan jenis kedalaman yang berbeda. Ada kolam untuk anak-anak yang memiliki permainan papan seluncur. Ada juga kolam untuk orang dewasa bertipe Olympic dengan kedalaman 125-250 m.  Kolam renang ini juga sering digunakan sebagai tempat untuk berlatih renang yang didampingi oleh pelatih. Bagi yang tidak membawa perlengkapan renang, tersedia tempat untuk membeli atau menyewa peralatan renang.', 'Toilet, Tempat Istirahat', NULL, NULL, 'superadmin', NULL, 'Untuk Harga Sekali Masuk Bukan Per Jam'),
+(3, 'Tempat Fitness', 15000, 'tempat-fitness20230608224924.jpg', 'Fasilitas olahraga selanjutnya adalah kolam renang. Bengawan Sport Centre memiliki dua kolam dengan jenis kedalaman yang berbeda. Ada kolam untuk anak-anak yang memiliki permainan papan seluncur. Ada juga kolam untuk orang dewasa bertipe Olympic dengan kedalaman 125-250 m.  Kolam renang ini juga sering digunakan sebagai tempat untuk berlatih renang yang didampingi oleh pelatih. Bagi yang tidak membawa perlengkapan renang, tersedia tempat untuk membeli atau menyewa peralatan renang.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL, 'Untuk Harga Sekali Masuk Bukan Per Jam'),
+(4, 'Lapangan Bulu Tangkis 1', 30000, 'lapangan-bulu-tangkis20230526093155.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', NULL, NULL, 'superadmin', NULL, '-'),
+(5, 'Area Bowling', 20000, 'lapangan-e20230526093101.jpg', 'Bengawan Sport Centre juga menyediakan arena bermain boling harga terjangkau. Bahkan, tempat ini satu-satunya yang menyediakan permainan Bowling di Surakarta. Sedangkan sistem permainannya yaitu satu kali bermain sebanyak 10 kali lemparan.  Fasilitas Boling di Bengawan Sport Centre cukup lengkap mulai dari papan skor, tempat duduk hingga sepatu khusus. Selain itu yang terpenting terdapat setidaknya 20 lintasan boling.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL, 'Harga Per Game, tiap games 10 lemparan'),
+(9, 'Lapangan Tenis 1', 150000, 'lapangan-tenis.jpg', 'Tidak hanya futsal dan renang, tersedia pula lapangan untuk bermain bulu tangkis. Area lapangan untuk olahraga Tenis ini luas sehingga bisa digunakan untuk banyak orang. Jadi, satu lapangan bisa menjadi sekitar tiga permainan di spot-spot yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, 'superadmin', NULL, '-'),
+(11, 'Lapangan Bulu Tangkis 2', 30000, 'lapangan-bulu-tangkis-220230713143307.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, 'superadmin', NULL, '-'),
+(12, 'Lapangan Bulu Tangkis 3', 30000, 'lapangan-bulu-tangkis-320230713143403.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, '-'),
+(13, 'Lapangan Bulu Tangkis 4', 30000, 'lapangan-bulu-tangkis-420230713143431.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, '-'),
+(14, 'Lapangan Bulu Tangkis 5', 30000, 'lapangan-bulu-tangkis-520230713143542.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, '-'),
+(15, 'Lapangan Bulu Tangkis 6', 30000, 'lapangan-bulu-tangkis-620230713143621.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, '-'),
+(16, 'Lapangan Tenis 2', 150000, 'lapangan-tenis-220230713143759.jpg', 'Tidak hanya futsal dan renang, tersedia pula lapangan untuk bermain bulu tangkis. Area lapangan untuk olahraga Tenis ini luas sehingga bisa digunakan untuk banyak orang. Jadi, satu lapangan bisa menjadi sekitar tiga permainan di spot-spot yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, '-'),
+(17, 'Lapangan Tenis 3', 150000, 'lapangan-bulu-tangkis-320230713143840.jpg', 'Tidak hanya futsal dan renang, tersedia pula lapangan untuk bermain bulu tangkis. Area lapangan untuk olahraga Tenis ini luas sehingga bisa digunakan untuk banyak orang. Jadi, satu lapangan bisa menjadi sekitar tiga permainan di spot-spot yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, 'superadmin', NULL, '-');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login_attempts`
+-- Struktur dari tabel `login_attempts`
 --
 
 CREATE TABLE `login_attempts` (
   `id` int(10) UNSIGNED NOT NULL,
-  `ip_address` varchar(15) CHARACTER SET utf8 NOT NULL,
-  `login` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `ip_address` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `time` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(20, '::1', 'alfi@gmail.com', 1688581507),
-(21, '::1', 'alfi@gmail.com', 1688644069),
-(22, '::1', 'alfi@gmail.com', 1688644084);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `page`
+-- Struktur dari tabel `page`
 --
 
 CREATE TABLE `page` (
@@ -862,10 +861,10 @@ CREATE TABLE `page` (
   `judul_seo` varchar(50) NOT NULL,
   `isi_page` text NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `page`
+-- Dumping data untuk tabel `page`
 --
 
 INSERT INTO `page` (`id_page`, `judul_page`, `judul_seo`, `isi_page`, `gambar`) VALUES
@@ -878,16 +877,16 @@ INSERT INTO `page` (`id_page`, `judul_page`, `judul_seo`, `isi_page`, `gambar`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provinsi`
+-- Struktur dari tabel `provinsi`
 --
 
 CREATE TABLE `provinsi` (
   `id_provinsi` int(11) NOT NULL,
   `nama_provinsi` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `provinsi`
+-- Dumping data untuk tabel `provinsi`
 --
 
 INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
@@ -929,7 +928,7 @@ INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Struktur dari tabel `slider`
 --
 
 CREATE TABLE `slider` (
@@ -945,10 +944,10 @@ CREATE TABLE `slider` (
   `modified_at` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `modified_by` char(50) NOT NULL,
   `uploader` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `slider`
+-- Dumping data untuk tabel `slider`
 --
 
 INSERT INTO `slider` (`id_slider`, `no_urut`, `nama_slider`, `link`, `foto`, `foto_type`, `foto_size`, `created_at`, `created_by`, `modified_at`, `modified_by`, `uploader`) VALUES
@@ -962,7 +961,7 @@ INSERT INTO `slider` (`id_slider`, `no_urut`, `nama_slider`, `link`, `foto`, `fo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -977,10 +976,10 @@ CREATE TABLE `transaksi` (
   `status` int(11) NOT NULL,
   `created_date` date NOT NULL,
   `created_time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `transaksi`
+-- Dumping data untuk tabel `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `diskon`, `grand_total`, `deadline`, `catatan`, `status`, `created_date`, `created_time`) VALUES
@@ -1039,7 +1038,7 @@ INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `disko
 (55, 'J-230608-0034', 1, 100000, 0, 100000, '2023-06-08 15:53:45', '', 1, '2023-06-08', '02:53:38'),
 (56, 'J-230608-0035', 1, 200000, 0, 200000, '2023-06-08 16:04:39', '', 1, '2023-06-08', '03:01:14'),
 (57, 'J-230608-0036', 1, 0, 0, 0, '2023-06-16 14:12:46', '', 1, '2023-06-08', '03:44:28'),
-(58, 'J-230616-0037', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-16', '01:13:18'),
+(58, 'J-230616-0037', 1, 250000, 0, 250000, '2023-07-13 15:06:54', '', 1, '2023-06-16', '01:13:18'),
 (59, 'J-230617-0038', 7, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-17', '12:41:50'),
 (60, 'J-230617-0039', 6, 200000, 30000, 170000, '2023-06-17 14:02:01', '', 1, '2023-06-17', '01:01:32'),
 (61, 'J-230617-0040', 6, 200000, 30000, 170000, '2023-06-17 14:05:17', '', 1, '2023-06-17', '01:04:21'),
@@ -1052,13 +1051,16 @@ INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `disko
 (68, 'J-230627-0047', 5, 600000, 0, 600000, '2023-06-27 13:27:13', '', 1, '2023-06-27', '12:25:57'),
 (69, 'J-230706-0001', 5, 150000, 0, 150000, '2023-07-06 02:25:41', '', 1, '2023-07-06', '01:25:29'),
 (70, 'J-230706-0002', 5, 150000, 0, 150000, '2023-07-06 02:32:26', '', 1, '2023-07-06', '01:28:27'),
-(71, 'J-230706-0003', 5, 250000, 0, 250000, '2023-07-06 19:47:03', '', 1, '2023-07-06', '08:46:43'),
-(72, 'J-230706-0004', 6, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-07-06', '06:48:36');
+(71, 'J-230706-0003', 5, 250000, 0, 250000, '2023-07-06 19:47:03', '', 2, '2023-07-06', '08:46:43'),
+(72, 'J-230706-0004', 6, 0, 0, 0, '0000-00-00 00:00:00', '', 2, '2023-07-06', '06:48:36'),
+(73, 'J-230713-0005', 1, 200000, 0, 200000, '2023-07-13 15:07:28', '', 1, '2023-07-13', '02:07:04'),
+(74, 'J-230713-0006', 1, 15000, 0, 15000, '2023-07-13 15:25:06', 'bshshshsuzbuaxbu', 1, '2023-07-13', '02:08:41'),
+(75, 'J-230713-0007', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-07-13', '02:25:42');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi_detail`
+-- Struktur dari tabel `transaksi_detail`
 --
 
 CREATE TABLE `transaksi_detail` (
@@ -1072,10 +1074,10 @@ CREATE TABLE `transaksi_detail` (
   `harga_jual` int(11) NOT NULL,
   `total` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `transaksi_detail`
+-- Dumping data untuk tabel `transaksi_detail`
 --
 
 INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tanggal`, `jam_mulai`, `durasi`, `jam_selesai`, `harga_jual`, `total`, `created_at`) VALUES
@@ -1128,7 +1130,6 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 (78, 55, 4, '2023-06-29', '24:00:00', 1, '25:00:00', 100000, 100000, '2023-06-08 14:53:38'),
 (79, 56, 5, '2023-06-29', '20:00:00', 1, '21:00:00', 200000, 200000, '2023-06-08 15:01:14'),
 (85, 57, 2, '2023-06-28', '24:00:00', 1, '25:00:00', 150000, 0, '2023-06-16 13:07:39'),
-(91, 58, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-06-16 13:44:53'),
 (92, 59, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-06-17 12:41:50'),
 (93, 22, 5, '2023-06-27', '12:00:00', 1, '13:00:00', 200000, 200000, '2023-06-17 12:55:20'),
 (94, 60, 5, '2023-06-28', '12:00:00', 1, '13:00:00', 200000, 200000, '2023-06-17 13:01:32'),
@@ -1144,47 +1145,51 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 (104, 70, 2, '2023-07-25', '10:00:00', 1, '11:00:00', 150000, 150000, '2023-07-06 01:28:27'),
 (105, 71, 2, '2023-07-26', '23:00:00', 1, '24:00:00', 150000, 150000, '2023-07-06 08:46:43'),
 (107, 71, 4, '2023-07-27', '11:00:00', 1, '12:00:00', 100000, 100000, '2023-07-06 08:46:52'),
-(108, 58, 1, '0000-00-00', NULL, 0, NULL, 35000, 35000, '2023-07-06 15:42:56'),
-(109, 58, 2, '0000-00-00', NULL, 0, NULL, 150000, 150000, '2023-07-06 16:32:30'),
-(110, 72, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-07-06 18:48:36');
+(109, 58, 2, '2023-07-14', '21:00:00', 1, '22:00:00', 150000, 150000, '2023-07-06 16:32:30'),
+(110, 72, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-07-06 18:48:36'),
+(111, 58, 4, '2023-07-25', '12:00:00', 1, '13:00:00', 100000, 100000, '2023-07-13 13:40:43'),
+(113, 73, 5, '2023-07-17', '16:00:00', 1, '17:00:00', 200000, 200000, '2023-07-13 14:07:04'),
+(116, 74, 3, '2023-07-27', '20:00:00', 1, '21:00:00', 15000, 15000, '2023-07-13 14:24:46'),
+(117, 75, 3, '0000-00-00', NULL, 0, NULL, 15000, 15000, '2023-07-13 14:25:42'),
+(118, 75, 4, '0000-00-00', NULL, 0, NULL, 30000, 30000, '2023-07-13 14:25:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `username` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `email` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `phone` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `username` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `provinsi` int(11) DEFAULT NULL,
   `kota` int(11) DEFAULT NULL,
-  `address` text CHARACTER SET utf8 NOT NULL,
+  `address` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `usertype` int(11) NOT NULL,
   `active` tinyint(3) UNSIGNED DEFAULT NULL,
-  `photo` text CHARACTER SET utf8 DEFAULT NULL,
-  `photo_type` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
-  `ip_address` varchar(45) CHARACTER SET utf8 NOT NULL,
-  `salt` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `activation_code` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
-  `forgotten_password_code` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `photo` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `photo_type` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `activation_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `forgotten_password_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `forgotten_password_time` int(10) UNSIGNED DEFAULT NULL,
-  `remember_code` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
+  `remember_code` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `last_login` int(11) DEFAULT NULL,
   `created_on` int(11) NOT NULL,
   `modified` datetime DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `phone`, `provinsi`, `kota`, `address`, `usertype`, `active`, `photo`, `photo_type`, `ip_address`, `salt`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `last_login`, `created_on`, `modified`) VALUES
-(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1688623588, 2147483647, '2023-07-06 13:06:28'),
+(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1689230180, 2147483647, '2023-07-13 13:36:20'),
 (2, 'Admin', 'administrator', '$2y$08$rnCngWyQhFLdVJijctNDKuwJZ8o9VfcSsZ9IM9XN71ugxIpQFeCWe', 'administrator@gmail.com', '08124124', NULL, NULL, 'kaldjlas', 2, 1, 'admin20180424102408', '.jpeg', '::1', NULL, NULL, NULL, NULL, NULL, 1685067356, 1524551716, '2023-05-26 09:15:56'),
 (3, 'Batistuta', 'batistuta', '12345678', 'batistuta@gmail.com', '0812412414', 33, 327, 'Jl. Skdlajsdlasjkdl', 4, 1, NULL, NULL, '127.0.0.1', NULL, NULL, NULL, NULL, NULL, 1621257779, 1528634033, '2023-06-17 12:40:04'),
 (4, 'User Premium', 'userpremium', '12345678', 'userpremium@gmail.com', '0812412412', 3, 106, 'kaljdklasjdkl', 3, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1621252638, 1531807819, '2023-05-23 08:59:41'),
@@ -1195,16 +1200,16 @@ INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `phone`, `pr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_group`
+-- Struktur dari tabel `users_group`
 --
 
 CREATE TABLE `users_group` (
   `id_group` int(11) NOT NULL,
   `name_group` char(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `users_group`
+-- Dumping data untuk tabel `users_group`
 --
 
 INSERT INTO `users_group` (`id_group`, `name_group`) VALUES
@@ -1219,93 +1224,93 @@ INSERT INTO `users_group` (`id_group`, `name_group`) VALUES
 --
 
 --
--- Indexes for table `album`
+-- Indeks untuk tabel `album`
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`id_album`);
 
 --
--- Indexes for table `bank`
+-- Indeks untuk tabel `bank`
 --
 ALTER TABLE `bank`
   ADD PRIMARY KEY (`id_bank`);
 
 --
--- Indexes for table `company`
+-- Indeks untuk tabel `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id_company`);
 
 --
--- Indexes for table `diskon`
+-- Indeks untuk tabel `diskon`
 --
 ALTER TABLE `diskon`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `event`
+-- Indeks untuk tabel `event`
 --
 ALTER TABLE `event`
   ADD PRIMARY KEY (`id_event`);
 
 --
--- Indexes for table `foto`
+-- Indeks untuk tabel `foto`
 --
 ALTER TABLE `foto`
   ADD PRIMARY KEY (`id_foto`),
   ADD KEY `foto_FK` (`album_id`);
 
 --
--- Indexes for table `jam`
+-- Indeks untuk tabel `jam`
 --
 ALTER TABLE `jam`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `kontak`
+-- Indeks untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
   ADD PRIMARY KEY (`id_kontak`);
 
 --
--- Indexes for table `lapangan`
+-- Indeks untuk tabel `lapangan`
 --
 ALTER TABLE `lapangan`
   ADD PRIMARY KEY (`id_lapangan`);
 
 --
--- Indexes for table `login_attempts`
+-- Indeks untuk tabel `login_attempts`
 --
 ALTER TABLE `login_attempts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `page`
+-- Indeks untuk tabel `page`
 --
 ALTER TABLE `page`
   ADD PRIMARY KEY (`id_page`);
 
 --
--- Indexes for table `slider`
+-- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id_slider`);
 
 --
--- Indexes for table `transaksi`
+-- Indeks untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_trans`),
   ADD KEY `transaksi_FK` (`user_id`);
 
 --
--- Indexes for table `transaksi_detail`
+-- Indeks untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
   ADD PRIMARY KEY (`id_transdet`),
@@ -1313,135 +1318,135 @@ ALTER TABLE `transaksi_detail`
   ADD KEY `transaksi_detail_FK_1` (`trans_id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users_group`
+-- Indeks untuk tabel `users_group`
 --
 ALTER TABLE `users_group`
   ADD PRIMARY KEY (`id_group`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `album`
+-- AUTO_INCREMENT untuk tabel `album`
 --
 ALTER TABLE `album`
   MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `bank`
+-- AUTO_INCREMENT untuk tabel `bank`
 --
 ALTER TABLE `bank`
   MODIFY `id_bank` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `company`
+-- AUTO_INCREMENT untuk tabel `company`
 --
 ALTER TABLE `company`
   MODIFY `id_company` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `event`
+-- AUTO_INCREMENT untuk tabel `event`
 --
 ALTER TABLE `event`
   MODIFY `id_event` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `foto`
+-- AUTO_INCREMENT untuk tabel `foto`
 --
 ALTER TABLE `foto`
   MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `jam`
+-- AUTO_INCREMENT untuk tabel `jam`
 --
 ALTER TABLE `jam`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `kontak`
+-- AUTO_INCREMENT untuk tabel `kontak`
 --
 ALTER TABLE `kontak`
   MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `lapangan`
+-- AUTO_INCREMENT untuk tabel `lapangan`
 --
 ALTER TABLE `lapangan`
-  MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `login_attempts`
+-- AUTO_INCREMENT untuk tabel `login_attempts`
 --
 ALTER TABLE `login_attempts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `page`
+-- AUTO_INCREMENT untuk tabel `page`
 --
 ALTER TABLE `page`
   MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT untuk tabel `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `transaksi`
+-- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT for table `transaksi_detail`
+-- AUTO_INCREMENT untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
-  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `users_group`
+-- AUTO_INCREMENT untuk tabel `users_group`
 --
 ALTER TABLE `users_group`
   MODIFY `id_group` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `foto`
+-- Ketidakleluasaan untuk tabel `foto`
 --
 ALTER TABLE `foto`
   ADD CONSTRAINT `foto_FK` FOREIGN KEY (`album_id`) REFERENCES `album` (`id_album`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transaksi`
+-- Ketidakleluasaan untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_FK` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transaksi_detail`
+-- Ketidakleluasaan untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
   ADD CONSTRAINT `transaksi_detail_FK` FOREIGN KEY (`lapangan_id`) REFERENCES `lapangan` (`id_lapangan`) ON DELETE CASCADE ON UPDATE CASCADE,
