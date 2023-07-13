@@ -12,6 +12,7 @@
   <link href="<?php echo base_url() ?>assets/template/frontend/css/custom.css" rel="stylesheet">
   <script src="<?php echo base_url() ?>assets/plugins/jquery/jquery-3.3.1.js" rel="stylesheet"></script>
   <script src="<?php echo base_url() ?>assets/template/frontend/js/popper.min.js" rel="stylesheet"></script>
+  <script src="<?php echo base_url() ?>assets/template/frontend/js/regora.js" rel="stylesheet"></script>
   <script src="<?php echo base_url() ?>assets/template/frontend/js/bootstrap.min.js" rel="stylesheet"></script>
   <script src="<?php echo base_url() ?>assets/template/frontend/js/moment.min.js" rel="stylesheet"></script>
   <link href="<?php echo base_url() ?>assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />

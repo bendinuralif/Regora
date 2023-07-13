@@ -10,13 +10,13 @@
         ?></p>
         <p><?php echo $lapangan->deskripsi; ?></p>
         <!-- <p>ID: <?php echo $lapangan->id_lapangan; ?></p> -->
-        <p>Harga:  <?php
+        <p>Harga :  <?php
           $harga_rupiah = number_format($lapangan->harga, 0, ',', '.');
           echo 'Rp. '.$harga_rupiah . ' ,-';
           ?></p>
         <!-- Tambahkan informasi lain yang diperlukan -->
-        <p>Fasilitas: <?php echo $lapangan->fasilitas; ?></p>
-        <p>Keterangan: <?php echo $lapangan->keterangan; ?></p>
+        <p>Fasilitas : <?php echo $lapangan->fasilitas; ?></p>
+        <p>Keterangan : <?php echo $lapangan->keterangan; ?></p>
 
         <!-- Tambahkan tombol atau tautan untuk aksi lainnya, misalnya untuk booking -->
         <a href="<?php echo base_url('cart/buy/').$lapangan->id_lapangan ?>">
