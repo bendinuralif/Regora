@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jul 2023 pada 15.18
+-- Waktu pembuatan: 13 Jul 2023 pada 05.22
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.0.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `futsal`
+-- Database: `regora_db`
 --
 
 -- --------------------------------------------------------
@@ -806,20 +806,25 @@ CREATE TABLE `lapangan` (
   `created_by` varchar(255) DEFAULT NULL,
   `created_at` varchar(255) DEFAULT NULL,
   `modified_by` varchar(255) DEFAULT NULL,
-  `modified_at` varchar(255) DEFAULT NULL
+  `modified_at` varchar(255) DEFAULT NULL,
+  `keterangan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `lapangan`
 --
 
-INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `deskripsi`, `fasilitas`, `created_by`, `created_at`, `modified_by`, `modified_at`) VALUES
-(1, 'Lapangan Futsal', 35000, 'lapangan-futsal20230526092511.jpg', 'Lapangan Futsal termasuk salah satu fasilitas olahraga yang tersedia di Bengawan Sport Centre. Area lapangan ini dikelilingi oleh pagar besi. Fungsi dari pagar tersebut adalah untuk mencegah keluarnya bola dari lapangan. Di samping area lapangan ini sudah dilengkapi dengan kursi-kursi duduk untuk para pemain atau penonton.  Biasanya pengunjung yang bermain futsal merupakan rombongan dari suatu komunitas. Bahkan, lapangan futsal di sini kerap menjadi tempat untuk melangsungkan turnamen futsal.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
-(2, 'Kolam Renang', 150000, 'kolam-renang20230526093002.jpg', 'Fasilitas olahraga selanjutnya adalah kolam renang. Bengawan Sport Centre memiliki dua kolam dengan jenis kedalaman yang berbeda. Ada kolam untuk anak-anak yang memiliki permainan papan seluncur. Ada juga kolam untuk orang dewasa bertipe Olympic dengan kedalaman 125-250 m.  Kolam renang ini juga sering digunakan sebagai tempat untuk berlatih renang yang didampingi oleh pelatih. Bagi yang tidak membawa perlengkapan renang, tersedia tempat untuk membeli atau menyewa peralatan renang.', 'Toilet', NULL, NULL, 'superadmin', NULL),
-(3, 'Tempat Fitness', 80000, 'tempat-fitness20230608224924.jpg', '', 'Toilet', NULL, NULL, 'superadmin', NULL),
-(4, 'Lapangan Bulu Tangkis', 100000, 'lapangan-bulu-tangkis20230526093155.jpg', '', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
-(5, 'Area Bowling', 200000, 'lapangan-e20230526093101.jpg', 'Bengawan Sport Centre juga menyediakan arena bermain boling harga terjangkau. Bahkan, tempat ini satu-satunya yang menyediakan permainan Bowling di Surakarta. Sedangkan sistem permainannya yaitu satu kali bermain sebanyak 10 kali lemparan.  Fasilitas Boling di Bengawan Sport Centre cukup lengkap mulai dari papan skor, tempat duduk hingga sepatu khusus. Selain itu yang terpenting terdapat setidaknya 20 lintasan boling.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL),
-(9, 'Lapangan Tenis', 150000, 'lapangan-tenis20230608225117.jpg', '', 'Toilet', 'superadmin', NULL, 'superadmin', NULL);
+INSERT INTO `lapangan` (`id_lapangan`, `nama_lapangan`, `harga`, `foto`, `deskripsi`, `fasilitas`, `created_by`, `created_at`, `modified_by`, `modified_at`, `keterangan`) VALUES
+(1, 'Lapangan Futsal', 35000, 'lapangan-futsal20230526092511.jpg', 'Lapangan Futsal termasuk salah satu fasilitas olahraga yang tersedia di Bengawan Sport Centre. Area lapangan ini dikelilingi oleh pagar besi. Fungsi dari pagar tersebut adalah untuk mencegah keluarnya bola dari lapangan. Di samping area lapangan ini sudah dilengkapi dengan kursi-kursi duduk untuk para pemain atau penonton.  Biasanya pengunjung yang bermain futsal merupakan rombongan dari suatu komunitas. Bahkan, lapangan futsal di sini kerap menjadi tempat untuk melangsungkan turnamen futsal.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL, ''),
+(2, 'Kolam Renang', 150000, 'kolam-renang20230526093002.jpg', 'Fasilitas olahraga selanjutnya adalah kolam renang. Bengawan Sport Centre memiliki dua kolam dengan jenis kedalaman yang berbeda. Ada kolam untuk anak-anak yang memiliki permainan papan seluncur. Ada juga kolam untuk orang dewasa bertipe Olympic dengan kedalaman 125-250 m.  Kolam renang ini juga sering digunakan sebagai tempat untuk berlatih renang yang didampingi oleh pelatih. Bagi yang tidak membawa perlengkapan renang, tersedia tempat untuk membeli atau menyewa peralatan renang.', 'Toilet', NULL, NULL, 'superadmin', NULL, '#Untuk Harga Sekali Masuk Bukan  Per Jam'),
+(3, 'Tempat Fitness', 80000, 'tempat-fitness20230608224924.jpg', 'Bengawan Sport Centre juga menyediakan wahana untuk olahraga fitness. Di tempat ini menyediakan beragam alat-alat fitness yang cukup lengkap. Alat-alat tersebut seperti angkat barbell, Barbell Machine, Chest Press Machine, Leg Press Machine, Treadmill dan lain-lain.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL, ''),
+(4, 'Lapangan Bulu Tangkis 1', 100000, 'lapangan-bulu-tangkis20230526093155.jpg', 'rea lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', NULL, NULL, 'superadmin', NULL, ''),
+(5, 'Area Bowling', 200000, 'lapangan-e20230526093101.jpg', 'Bengawan Sport Centre juga menyediakan arena bermain boling harga terjangkau. Bahkan, tempat ini satu-satunya yang menyediakan permainan Bowling di Surakarta. Sedangkan sistem permainannya yaitu satu kali bermain sebanyak 10 kali lemparan.  Fasilitas Boling di Bengawan Sport Centre cukup lengkap mulai dari papan skor, tempat duduk hingga sepatu khusus. Selain itu yang terpenting terdapat setidaknya 20 lintasan boling.', 'Toilet, Tempat Istirahat, AC', NULL, NULL, 'superadmin', NULL, ''),
+(9, 'Lapangan Tenis', 150000, 'lapangan-tenis20230608225117.jpg', '', 'Toilet', 'superadmin', NULL, 'superadmin', NULL, ''),
+(11, 'Lapangan Bulu Tangkis 2', 100000, 'lapangan-bulu-tangkis-220230713094712.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, 'superadmin', NULL, ''),
+(12, 'Lapangan Bulu Tangkis 3', 100000, 'lapangan-bulu-tangkis-1320230713094806.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, 'superadmin', NULL, ''),
+(13, 'Lapangan Bulu Tangkis 4', 1000000, 'lapangan-bulu-tangkis-420230713094957.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, ''),
+(14, 'Lapangan Bulu Tangkis 5', 100000, 'lapangan-bulu-tangkis-520230713095022.jpg', 'Area lapangan bulu tangkisnya luas, sehingga bisa digunakan oleh banyak orang. Oleh karena itu, sebuah bidang dapat berisi sekitar lima permainan di lokasi yang berbeda.', 'Toilet, Tempat Istirahat', 'superadmin', NULL, NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -833,15 +838,6 @@ CREATE TABLE `login_attempts` (
   `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `time` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data untuk tabel `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(20, '::1', 'alfi@gmail.com', 1688581507),
-(21, '::1', 'alfi@gmail.com', 1688644069),
-(22, '::1', 'alfi@gmail.com', 1688644084);
 
 -- --------------------------------------------------------
 
@@ -1031,21 +1027,22 @@ INSERT INTO `transaksi` (`id_trans`, `id_invoice`, `user_id`, `subtotal`, `disko
 (55, 'J-230608-0034', 1, 100000, 0, 100000, '2023-06-08 15:53:45', '', 1, '2023-06-08', '02:53:38'),
 (56, 'J-230608-0035', 1, 200000, 0, 200000, '2023-06-08 16:04:39', '', 1, '2023-06-08', '03:01:14'),
 (57, 'J-230608-0036', 1, 0, 0, 0, '2023-06-16 14:12:46', '', 1, '2023-06-08', '03:44:28'),
-(58, 'J-230616-0037', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-16', '01:13:18'),
-(59, 'J-230617-0038', 7, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-06-17', '12:41:50'),
+(58, 'J-230616-0037', 1, 490000, 0, 490000, '2023-07-13 10:37:36', '', 1, '2023-06-16', '01:13:18'),
+(59, 'J-230617-0038', 7, 0, 0, 0, '0000-00-00 00:00:00', '', 2, '2023-06-17', '12:41:50'),
 (60, 'J-230617-0039', 6, 200000, 30000, 170000, '2023-06-17 14:02:01', '', 1, '2023-06-17', '01:01:32'),
 (61, 'J-230617-0040', 6, 200000, 30000, 170000, '2023-06-17 14:05:17', '', 1, '2023-06-17', '01:04:21'),
 (62, 'J-230617-0041', 6, 200000, 30000, 170000, '2023-06-17 14:09:13', '', 1, '2023-06-17', '01:08:58'),
-(63, 'J-230619-0042', 6, 200000, 30000, 170000, '2023-06-19 10:32:55', '', 1, '2023-06-19', '09:30:04'),
-(64, 'J-230619-0043', 6, 150000, 30000, 120000, '2023-06-19 10:33:11', '', 1, '2023-06-19', '09:33:04'),
-(65, 'J-230619-0044', 6, 150000, 30000, 120000, '2023-06-19 11:18:14', '', 1, '2023-06-19', '10:18:06'),
+(63, 'J-230619-0042', 6, 200000, 30000, 170000, '2023-06-19 10:32:55', '', 2, '2023-06-19', '09:30:04'),
+(64, 'J-230619-0043', 6, 150000, 30000, 120000, '2023-06-19 10:33:11', '', 2, '2023-06-19', '09:33:04'),
+(65, 'J-230619-0044', 6, 150000, 30000, 120000, '2023-06-19 11:18:14', '', 2, '2023-06-19', '10:18:06'),
 (66, 'J-230619-0045', 5, 200000, 0, 200000, '2023-06-19 12:09:58', '', 1, '2023-06-19', '11:09:44'),
 (67, 'J-230627-0046', 5, 750000, 0, 750000, '2023-06-27 13:25:41', '', 1, '2023-06-27', '12:25:18'),
 (68, 'J-230627-0047', 5, 600000, 0, 600000, '2023-06-27 13:27:13', '', 1, '2023-06-27', '12:25:57'),
 (69, 'J-230706-0001', 5, 150000, 0, 150000, '2023-07-06 02:25:41', '', 1, '2023-07-06', '01:25:29'),
 (70, 'J-230706-0002', 5, 150000, 0, 150000, '2023-07-06 02:32:26', '', 1, '2023-07-06', '01:28:27'),
 (71, 'J-230706-0003', 5, 250000, 0, 250000, '2023-07-06 19:47:03', '', 1, '2023-07-06', '08:46:43'),
-(72, 'J-230706-0004', 6, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-07-06', '06:48:36');
+(72, 'J-230706-0004', 6, 0, 0, 0, '0000-00-00 00:00:00', '', 2, '2023-07-06', '06:48:36'),
+(73, 'J-230713-0005', 1, 0, 0, 0, '0000-00-00 00:00:00', '', 0, '2023-07-13', '10:05:55');
 
 -- --------------------------------------------------------
 
@@ -1120,7 +1117,7 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 (78, 55, 4, '2023-06-29', '24:00:00', 1, '25:00:00', 100000, 100000, '2023-06-08 14:53:38'),
 (79, 56, 5, '2023-06-29', '20:00:00', 1, '21:00:00', 200000, 200000, '2023-06-08 15:01:14'),
 (85, 57, 2, '2023-06-28', '24:00:00', 1, '25:00:00', 150000, 0, '2023-06-16 13:07:39'),
-(91, 58, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-06-16 13:44:53'),
+(91, 58, 5, '2023-07-20', '22:00:00', 1, '23:00:00', 200000, 200000, '2023-06-16 13:44:53'),
 (92, 59, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-06-17 12:41:50'),
 (93, 22, 5, '2023-06-27', '12:00:00', 1, '13:00:00', 200000, 200000, '2023-06-17 12:55:20'),
 (94, 60, 5, '2023-06-28', '12:00:00', 1, '13:00:00', 200000, 200000, '2023-06-17 13:01:32'),
@@ -1136,9 +1133,10 @@ INSERT INTO `transaksi_detail` (`id_transdet`, `trans_id`, `lapangan_id`, `tangg
 (104, 70, 2, '2023-07-25', '10:00:00', 1, '11:00:00', 150000, 150000, '2023-07-06 01:28:27'),
 (105, 71, 2, '2023-07-26', '23:00:00', 1, '24:00:00', 150000, 150000, '2023-07-06 08:46:43'),
 (107, 71, 4, '2023-07-27', '11:00:00', 1, '12:00:00', 100000, 100000, '2023-07-06 08:46:52'),
-(108, 58, 1, '0000-00-00', NULL, 0, NULL, 35000, 35000, '2023-07-06 15:42:56'),
-(109, 58, 2, '0000-00-00', NULL, 0, NULL, 150000, 150000, '2023-07-06 16:32:30'),
-(110, 72, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-07-06 18:48:36');
+(108, 58, 1, '2023-07-20', '13:00:00', 4, '17:00:00', 35000, 140000, '2023-07-06 15:42:56'),
+(109, 58, 2, '2023-07-19', '21:00:00', 1, '22:00:00', 150000, 150000, '2023-07-06 16:32:30'),
+(110, 72, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-07-06 18:48:36'),
+(111, 73, 5, '0000-00-00', NULL, 0, NULL, 200000, 200000, '2023-07-13 10:05:55');
 
 -- --------------------------------------------------------
 
@@ -1176,7 +1174,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `email`, `phone`, `provinsi`, `kota`, `address`, `usertype`, `active`, `photo`, `photo_type`, `ip_address`, `salt`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `last_login`, `created_on`, `modified`) VALUES
-(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1688623588, 2147483647, '2023-07-06 13:06:28'),
+(1, 'SuperAdmin', 'superadmin', '$2y$08$TWMdtdacqPE5yEz9n1LwFuhEVmiDTTsupl12M45tCQihzF1tu2N/6', 'superadmin@gmail.com', '081228289766', 6, 151, 'asdasdasdsa', 1, 1, 'mazmi20180205001726', '.jpg', '::1', NULL, 'c6ad242e6fd3de875568c7de5ba23af4a24137ef', 'tHafW45duPzrU3oWR0AVuO48b26088a3cd65edc4', 1621246176, NULL, 1689215710, 2147483647, '2023-07-13 09:35:10'),
 (2, 'Admin', 'administrator', '$2y$08$rnCngWyQhFLdVJijctNDKuwJZ8o9VfcSsZ9IM9XN71ugxIpQFeCWe', 'administrator@gmail.com', '08124124', NULL, NULL, 'kaldjlas', 2, 1, 'admin20180424102408', '.jpeg', '::1', NULL, NULL, NULL, NULL, NULL, 1685067356, 1524551716, '2023-05-26 09:15:56'),
 (3, 'Batistuta', 'batistuta', '12345678', 'batistuta@gmail.com', '0812412414', 33, 327, 'Jl. Skdlajsdlasjkdl', 4, 1, NULL, NULL, '127.0.0.1', NULL, NULL, NULL, NULL, NULL, 1621257779, 1528634033, '2023-06-17 12:40:04'),
 (4, 'User Premium', 'userpremium', '12345678', 'userpremium@gmail.com', '0812412412', 3, 106, 'kaljdklasjdkl', 3, 1, NULL, NULL, '::1', NULL, NULL, NULL, NULL, NULL, 1621252638, 1531807819, '2023-05-23 08:59:41'),
@@ -1372,7 +1370,7 @@ ALTER TABLE `kontak`
 -- AUTO_INCREMENT untuk tabel `lapangan`
 --
 ALTER TABLE `lapangan`
-  MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_lapangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `login_attempts`
@@ -1396,13 +1394,13 @@ ALTER TABLE `slider`
 -- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id_trans` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT untuk tabel `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
-  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id_transdet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
